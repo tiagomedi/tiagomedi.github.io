@@ -8,11 +8,11 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "Tiagomedi",
+	title: "TI4G0",
 	subtitle: "",
 	lang: "en", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
 	themeColor: {
-		hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+		hue: 300, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: true, // Hide the theme color picker for visitors
 	},
 	banner: {
@@ -55,7 +55,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/demo-avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Santiago Medina",
-	bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	bio: "cybersecurity writeups",
 	links: [
 		// {
 		// 	name: "Steam",
@@ -69,18 +69,26 @@ export const profileConfig: ProfileConfig = {
 		},
 		{
 			name: "LinkedIn",
-			icon: "fa6-brands:linkedin", // Visit https://icones.js.org/ for icon codes
+			icon: "fa6-brands:linkedin-in", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://www.linkedin.com/in/santiagomedinad",
 		},
 		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
+			name: "X",
+			icon: "fa6-brands:x-twitter", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://x.com/lord_samedii",
 		}
+		// },
+		// {
+		// 	name: "Discord",
+		// 	icon: "fa6-brands:discord", // Visit https://icones.js.org/ for icon codes
+		// 	// You will need to install the corresponding icon set if it's not already included
+		// 	// `pnpm add @iconify-json/<icon-set-name>`
+		// 	url: "",
+		// }
 	],
 };
 
