@@ -73,6 +73,13 @@ export const profileConfig: ProfileConfig = {
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
 			url: "https://www.linkedin.com/in/santiagomedinad",
+		},
+		{
+			name: "X",
+			icon: "fa6-brands:x", // Visit https://icones.js.org/ for icon codes
+			// You will need to install the corresponding icon set if it's not already included
+			// `pnpm add @iconify-json/<icon-set-name>`
+			url: "https://x.com/lord_samedii",
 		}
 	],
 };
