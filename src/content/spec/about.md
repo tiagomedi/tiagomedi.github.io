@@ -1,5 +1,5 @@
 # Sobre Mi
-Mi nombre es __Santiago Medina__. Soy estudiante de Ingeniería Civil en Informática y Telecomunicaciones, con formación complementaria en Ciberseguridad y Hacking Ético. Actualmente, me encuentro explorando el mundo del Red Teaming.
+Mi nombre es __Ignacio Santiago Medina__. Soy estudiante de Ingeniería Civil en Informática y Telecomunicaciones, con formación complementaria en Ciberseguridad y Hacking Ético. Actualmente, me encuentro explorando el mundo del Red Teaming.
 
 Este es mi espacio donde comparto cómo *resuelvo máquinas, retos, writeups de ciberseguridad y CTF*. Subo notas, explicaciones y recursos sobre las técnicas, herramientas e inteligencia artificial que utilizo, __todo pensado para APRENDER, PRACTICAR y también APORTAR a la comunidad.__
 
