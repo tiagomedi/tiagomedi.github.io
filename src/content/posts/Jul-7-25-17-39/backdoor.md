@@ -1,7 +1,7 @@
 ---
 title: ¿Que es un BACKDOOR 🕳️?
 published: 2025-07-07
-description: "🔍 Cuando no puedes entrar directamente... Haces que te abran la puerta desde dentro."
+description: "Este material es exclusivamente para fines educativos y legales, como ciberseguridad defensiva y aprendizaje ético**. El uso no autorizado de estos métodos es ilegal y sancionado por la ley."
 image: "./puerta-trasera-backdoor.jpg"
 tags: ["backdoor", "ssh reverse", "python"]
 category: Notes
