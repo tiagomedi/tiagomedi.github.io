@@ -1,5 +1,5 @@
 ---
-title: ¿Que es un BACKDOOR 🕳️?
+title: ¿Que es un BACKDOOR 🚪?
 published: 2025-07-07
 description: "Explora qué es un backdoor (puerta trasera), cómo funciona en el mundo del hacking ético, y aprende a crear ejemplos prácticos en Python, incluyendo túneles SSH inversos y técnicas de persistencia."
 image: "./puerta-trasera-backdoor.jpg"
