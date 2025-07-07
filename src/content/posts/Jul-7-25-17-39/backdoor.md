@@ -1,5 +1,5 @@
 ---
-title: ¿Que es un BACKDOOR 🚪?
+title: "Backdoors en Ciberseguridad: ¿Qué son y cómo funcionan? [+ ejemplo en Python 🐍]"
 published: 2025-07-07
 description: "Explora qué es un backdoor (puerta trasera), cómo funciona en el mundo del hacking ético, y aprende a crear ejemplos prácticos en Python, incluyendo túneles SSH inversos y técnicas de persistencia."
 image: "./puerta-trasera-backdoor.jpg"
@@ -21,6 +21,10 @@ Esto se puede ver como una puerta trasera secreta de un edificio que permite a a
 | 🔄 **Persistente**        | Puede seguir activo después de reinicios si se configura.                   |
 | 🎯 **Control Remoto**     | Permite ejecutar comandos o exfiltrar datos desde cualquier lugar.          |
 | ⚙️ **Versátil**           | Puede estar embebido en scripts, binarios, servicios o incluso firmware.    |
+
+## ⚠️ Importante: Uso Responsable
+Este contenido es **educativo** y está pensado para **aprendizaje ético**, *pentesting*, y **formación en ciberseguridad defensiva**.  
+🔒 No debe utilizarse para actividades maliciosas ni sin autorización.
+
 ---
-## 🚨 Advertencia
-> Este material es exclusivamente para fines **educativos y legales**, como **ciberseguridad defensiva** y **aprendizaje ético**. El uso no autorizado de estos métodos es ilegal y sancionado por la ley.
+
