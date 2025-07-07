@@ -8,4 +8,4 @@ category: Notes
 draft: false
 ---
 
-Hola
+El túnel SSH inverso es una técnica de acceso remoto muy utilizada por Pentesters y Hackers para __mantener acceso persistente a una máquina comprometida__ incluso cuando está detrás de NAT, firewall o sin puertos expuestos al exterior.
