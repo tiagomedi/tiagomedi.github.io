@@ -5,7 +5,7 @@ description: "Explora qué es un backdoor (puerta trasera), cómo funciona en el
 image: "./puerta-trasera-backdoor.jpg"
 tags: ["backdoor", "reverse shell", "python"]
 category: Notes
-draft: false
+draft: true
 ---
 
 Un *Backdoor* (puerta trasera) es un tipo malware que permite a un atacante __obtener acceso remoto a un sistema informatico, aplicación o red__. Se puede utilizar para fines maliciosos como la recopilación de de datos, el robo de información o el control remoto del sistema.
@@ -28,3 +28,6 @@ Este contenido es **educativo** y está pensado para **aprendizaje ético**, *pe
 
 ---
 
+## 💻 Ejemplo 1: Reverse Shell en Python
+
+### Vista del Servidor (server.py)
