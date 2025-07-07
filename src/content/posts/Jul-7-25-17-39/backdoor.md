@@ -13,7 +13,7 @@ Un *Backdoor* (puerta trasera) es un tipo malware que permite a un atacante __ob
 Esto se puede ver como una puerta trasera secreta de un edificio que permite a alguien acceder a un edificio __sin ser visto__. En el caso de un Backdoor, puede ser __un programa, una función o un xploit__ que permite al atacante evitar las medidas de seguridad del sistema, siendo esta una herramienta favorita de los Hackers o entidades gubernamentales que utilizan para espiar a sus víctimas.
 
 > 🔒 Se utiliza en ataques reales, pero también en pruebas de penetración con fines éticos.
----
+
 ## 🔍 Características principales
 | Característica            | Descripción                                                                 |
 |---------------------------|-----------------------------------------------------------------------------|
@@ -21,8 +21,6 @@ Esto se puede ver como una puerta trasera secreta de un edificio que permite a a
 | 🔄 **Persistente**        | Puede seguir activo después de reinicios si se configura.                   |
 | 🎯 **Control Remoto**     | Permite ejecutar comandos o exfiltrar datos desde cualquier lugar.          |
 | ⚙️ **Versátil**           | Puede estar embebido en scripts, binarios, servicios o incluso firmware.    |
-
-
+---
 ## 🚨 Advertencia
-
 > Este material es exclusivamente para fines **educativos y legales**, como **ciberseguridad defensiva** y **aprendizaje ético**. El uso no autorizado de estos métodos es ilegal y sancionado por la ley.
