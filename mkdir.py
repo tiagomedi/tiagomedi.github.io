@@ -8,7 +8,8 @@ day = datetime.now().day
 hour = datetime.now().strftime("%H")
 minute = datetime.now().strftime("%M")
 
-folder_name = f'{month}-{day}-{year}-{hour}:{minute}'
+folder_name = f'{month}-{day}-{year}-{hour}-{minute}'
+
 print("***** Nombre del directorio a crear => ", folder_name)
 
 ruta = f'./src/content/posts/{folder_name}'
