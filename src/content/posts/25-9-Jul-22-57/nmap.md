@@ -5,5 +5,5 @@ description: "..."
 image: "./nmap-1.jpg"
 tags: ["nmap"]
 category: Notes
-draft: true
+draft: false
 ---
