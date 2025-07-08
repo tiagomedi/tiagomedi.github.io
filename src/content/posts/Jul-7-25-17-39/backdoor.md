@@ -31,3 +31,6 @@ Este contenido es **educativo** y está pensado para **aprendizaje ético**, *pe
 ## 💻 Ejemplo 1: Reverse Shell en Python
 
 ### Vista del Servidor (server.py)
+```python
+
+```
