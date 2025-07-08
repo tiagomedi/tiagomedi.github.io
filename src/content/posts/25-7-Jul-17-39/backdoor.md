@@ -1,7 +1,7 @@
 ---
 title: "Backdoors en Ciberseguridad: ¿Qué son y cómo funcionan? [+ ejemplo Python 🐍]"
 published: 2025-07-07
-description: "Explora qué es un backdoor (puerta trasera), cómo funciona en el mundo del hacking ético, y aprende a crear ejemplos prácticos en Python, incluyendo túneles SSH inversos y técnicas de persistencia."
+description: "Explora qué es un backdoor (puerta trasera), cómo funciona en el mundo del hacking ético, y aprende a crear ejemplos prácticos en Python, incluyendo reverse shell y técnicas de persistencia."
 image: "./puerta-trasera-backdoor.jpg"
 tags: ["backdoor", "reverse shell", "python"]
 category: Notes
@@ -28,7 +28,7 @@ Este contenido es **educativo** y está pensado para **aprendizaje ético**, *pe
 
 ---
 
-## 💻 Ejemplo : Reverse Shell en Python - [GitHub](https://github.com/tiagomedi/backdoor-reverse-ssh)
+## 💻 Ejemplo : Reverse Shell en Python - [GitHub](https://github.com/tiagomedi/backdoor-reverse-shell)
 En este ejemplo analizaremos un backdoor de tipo __reverse shell implementado en Python__ que consta de dos componentes principales:
 - **Cliente (`client.py`)**: Ejecuta comandos remotamente y envía los resultados.
 - **Servidor (`server.py`)**: Recibe conexiones y permite enviar comandos.
@@ -207,3 +207,28 @@ def config():
 - Acepta la primera conexión entrante
 
 ### Flujo de Ejecución
+Por el lado del Servidor, al momento de iniciarlo, se ejecuta `config()` para iniciar el servidor, y `shell()` para interfaz interactiva. Al momento de ejecutar  `server.py` realiza una espera de conexiones entrantes.
+![Servidor en Espera](./img/1.png)
+
+Luego por el lado del Cliente, se ejecuta `config()` para conectarse al servidor, y `shell()` para iniciar el bucle de comandos.
+![Conexión del Cliente con la IP y Port](./img/2.png)
+
+Una vez realizada la conexión del Cliente con su IP y puerto, el Servidor recibe el mensaje de que se conecto correctamente y **muestra el directorio actual del cliente** tal como se aprecia en la siguiente imagen.
+![Directorio actual del Cliente vista desde el Servidor](./img/3.png)
+
+Una vez realizada la conexión el Servidor podrá realizar **ejecuciones de comandos sin restricciones en el sistema** siendo esta una de las tantas __Vulnerabilidades Identificadas__, *las otras son, sin autenticación, sin cifrado ya que esta en texto plano, sin validación de entrada y con manejos de errores básicos (información de errores limitadas)*. A continuación se aprecia la ejecución del comando `ls` desde la vista de `server.py`, entregandole los directorios del Cliente.
+![Ejecución de manejo de comandos ls](./img/4.png)
+
+Tambien podemos observar los otros manejos de comandos explicados anteriormente. Como `pwd`, `cd ..` y nuevamente `ls` desde la vista del Servidor. Y finalmente se cierra la conexión realizando un `exit` desde la terminal del Servidor.
+![Ejecución de manejo de comandos cd, pwd](./img/5.png)
+
+### 🛠️ Posibles Mejoras
+1. **🔐 Cifrado**: El problema actual es que las comunicaciones van en texto plano, lo que permite fácil interceptación y análisis del tráfico. La solución a lo anterior, es **Implementar SSL/TLS usando la librería `ssl` de Python.** El beneficio de realizar esto, es el cifrado completo de las comunicaciones, protección contra __eavesdropping__ *(es el acto de escuchar conversaciones privadas sin permiso)* y tener una integridad de los datos transmitidos.
+2. **🧑‍💻 Autenticación**: El código no posee una verificación de identidad, cualquier cliente puede conectarse al servidor. Para solucionar lo anterior, se debe de __Implementar autenticación por token, contraseña o certificados.__
+3. **🕵️‍♂️ Ofuscación**: El código es FACIL de identificar por sistemas de detección de malware. La solución a esto es tener  __Múltiples técnicas de ofuscación y evasión__, como por ejemplo *Ofuscación de Imports, Polimorfismo y Metamorfismo, etc.*
+4. **💾 Persistencia**: Actualmente el backdoor se pierde al reiniciar el sistema o cerrar el proceso. Lo que se debe de realizar son __Múltiples mecanismos de persistencia según el sistema operativo__ ya sea Windows con `winreg`, `shutil` por ejemplo; Linux con `stat` añadiendo trabajo cron para ejecuciones periódicas.
+
+## ✅ Finalización del Apunte
+El Backdoor del ejemplo implementa un __Reverse Shell Básico__ pero funcional que permite **el control remoto completo del sistema, navegación por el sistema de archivos, ejecución de comandos arbitrarios y una interfaz interactiva tipo Shell.**
+
+> Su simplicidad lo hace fácil de entender y modificar, pero también fácil de detectar por sistemas de seguridad modernos 👁️.
