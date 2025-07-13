@@ -8,7 +8,7 @@ day = datetime.now().day
 hour = datetime.now().strftime("%H")
 minute = datetime.now().strftime("%M")
 
-folder_name = f'{year}-{day}-{month}-{hour}{minute}'
+folder_name = f'{year}-{day}-{month}-{hour}-{minute}'
 
 print("***** Nombre del directorio a crear => ", folder_name)
 
