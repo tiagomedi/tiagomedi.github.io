@@ -2,18 +2,18 @@ import os
 import datetime
 from datetime import datetime, date
 
-month = date.today().strftime("%b")
-year = date.today().strftime("%y")
-day = datetime.now().day
+month = date.today().strftime("%m")
+year = date.today().strftime("%Y")
+day = datetime.now().strftime("%d")
 hour = datetime.now().strftime("%H")
 minute = datetime.now().strftime("%M")
 
-folder_name = f'{year}-{day}-{month}-{hour}-{minute}'
+folder_name = f'{year}-{month}-{day}-{hour}-{minute}-post'
 
 print("***** Nombre del directorio a crear => ", folder_name)
 
 # Cambiar la ruta según sea necesario
-ruta = f'./src/content/posts/{folder_name}'
+ruta = f'./src/content/blog/{folder_name}'
 
 if not os.path.exists(ruta):
     os.makedirs(ruta)
