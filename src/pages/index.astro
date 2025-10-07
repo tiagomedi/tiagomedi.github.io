@@ -20,7 +20,7 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
 	<div class='container'>
 		<div class='w-full md:flex md:items-center gap-16 mb-10'>
       <div class="text-pretty leading-9">
-        <h1 class="text-4xl font-bold mb-4">Hi There 👋, Syakir Here! </h1>
+        <h1 class="text-4xl font-bold mb-4">Hola 👋, soy Ignacio 'tiago' Santiago! </h1>
         <Prose>
           <div class="text-lg">
             <p>I am a Front-end Engineer from Indonesia. I love sharing what i know on <a href="https://devaradise.com" target="_blank">devaradise.com</a>, and sometime i also share freebies like this. I'm also active on <a href="https://dev.to/syakirurahman" target="_blank">dev.to</a> and <a href="https://x.com/syakirurahman" target="_blank">twitter</a>.</p>
@@ -28,13 +28,13 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
           </div>
         </Prose>
       </div>
-      <Image src={Ava} alt="Muhammad Syakirurohman" width={300} loading="eager" class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
+      <Image src={Ava} alt="Ignacio Santiago" width={300} loading="eager" class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
 		</div>
 		<main>
       <div class='mt-6 mb-12'>
         <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700">
-          <h2 class="text-lg font-bold mb-3">Recent Posts</h2>
-          <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">All posts &raquo;</a>
+          <h2 class="text-lg font-bold mb-3">Publicaciones Recientes</h2>
+          <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">Todas las publicaciones &raquo;</a>
         </div>
         <div>
           {
@@ -48,8 +48,8 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
       </div>
       <div>
         <div class="flex justify-between gap-2 mb-1">
-          <h2 class="text-lg font-bold mb-3">My Projects</h2>
-          <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">All projects &raquo;</a>
+          <h2 class="text-lg font-bold mb-3">Mis Proyectos</h2>
+          <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">Todos los proyectos &raquo;</a>
         </div>
         <ProjectList projects={top6Projects}/>
       </div>
