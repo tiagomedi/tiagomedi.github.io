@@ -20,21 +20,18 @@ export const projects: Project[] = [
   {
     ...(await getRepositoryDetails('tiagomedi/DataScience-project')),
     name: 'Clasificación de Notebooks por Rango de Precio.',
-    // demoLink: 'https://github.com/tiagomedi/DataScience-project',
     postLink: 'https://github.com/tiagomedi/DataScience-project',
     tags: ['Data Science', 'ML']
   },
   {
     ...(await getRepositoryDetails('tiagomedi/video-qa-automation')),
     name: 'Automatización de QA con LLMs: Generación de Casos de Prueba desde Videos de Interfaz',
-    // demoLink: 'https://github.com/tiagomedi/DataScience-project',
     postLink: 'https://github.com/tiagomedi/video-qa-automation',
     tags: ['QA', 'Python', 'IA']
   },
   {
     ...(await getRepositoryDetails('tiagomedi/ASAI-VirtualFit')),
     name: 'Interfaz Web de Monitoreo de Microservicios | Virtual Fit.',
-    // demoLink: 'https://github.com/tiagomedi/DataScience-project',
     postLink: 'https://github.com/tiagomedi/ASAI-VirtualFit',
     tags: ['SOA', 'Python', 'Docker']
   }
