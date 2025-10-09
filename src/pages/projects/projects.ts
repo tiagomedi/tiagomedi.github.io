@@ -27,7 +27,7 @@ export const projects: Project[] = [
     ...(await getRepositoryDetails('tiagomedi/video-qa-automation')),
     name: 'Automatización de QA con LLMs: Generación de Casos de Prueba desde Videos de Interfaz',
     postLink: 'https://github.com/tiagomedi/video-qa-automation',
-    tags: ['QA', 'Python', 'IA']
+    tags: ['QA', 'Python', 'LLM']
   },
   {
     ...(await getRepositoryDetails('tiagomedi/ASAI-VirtualFit')),
