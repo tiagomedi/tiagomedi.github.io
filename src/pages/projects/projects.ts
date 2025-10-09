@@ -21,7 +21,7 @@ export const projects: Project[] = [
     ...(await getRepositoryDetails('tiagomedi/DataScience-project')),
     name: 'Clasificación de Notebooks por Rango de Precio.',
     postLink: 'https://github.com/tiagomedi/DataScience-project',
-    tags: ['Data Science', 'ML']
+    tags: ['Data Science', 'ML', 'Python']
   },
   {
     ...(await getRepositoryDetails('tiagomedi/video-qa-automation')),
