@@ -1,5 +1,5 @@
 ---
-title: '🛡️ La Guía Definitiva del Hacker Ético: Herramientas y Comandos 🛡️'
+title: 'Herramientas de Ciberseguridad: De Nmap a Metasploit, Guía Práctica'
 description: 'Aquí tienes un resumen completo y fácil de entender de las herramientas más potentes del mundo de la ciberseguridad.'
 tags: ["EthicalHacking", "HerramientasDeHacking", "Tools", "HackingGuide"]
 pubDate: 'Oct 16 2025'
