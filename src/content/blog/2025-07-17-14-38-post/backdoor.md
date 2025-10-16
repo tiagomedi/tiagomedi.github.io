@@ -1,8 +1,7 @@
 ---
 title: 'Backdoors en Ciberseguridad: ¿Qué son y cómo funcionan?'
-slug: 'third-post'
 description: 'Explora qué es un backdoor (puerta trasera), cómo funciona en el mundo del hacking ético, y aprende a crear ejemplos prácticos en Python, incluyendo reverse shell y técnicas de persistencia.'
-tags: ["backdoor", "reverse shell", "python"]
+tags: ["Backdoor", "ReverseShell", "Python"]
 pubDate: 'Jul 17 2025'
 coverImage: './puerta-trasera-backdoor.jpg'
 ---
