@@ -7,83 +7,124 @@ import type { CollectionEntry } from 'astro:content';
 import Ava from '@src/assets/img/ava.jpg';
 import Prose from '../components/Prose.astro';
 import { projects } from './projects/projects';
-import ProjectList from '../components/ProjectList.astro'
+import ProjectList from '../components/ProjectList.astro';
 import PostItem from '../components/PostItem.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 
 const top6Projects = projects.slice(0, 6);
-const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 5);
+const posts = (await getCollection('blog'))
+  .sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 5);
 ---
 
 <BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
-	<div class='container'>
-		<div class='w-full md:flex md:items-center gap-16 mb-10'>
-      <div class="text-pretty leading-9">
-        <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-          Hola, soy Ignacio 'tiago' Santiago! 
-        </h1>
+  <div class="relative overflow-hidden">
+    <!-- Canvas de partículas -->
+    <canvas id="cyber-particles" class="absolute inset-0 w-full h-full z-0"></canvas>
 
-        <Prose>
-          <div class="text-lg">
-            <p>💻 Estudiante de Ingeniería Civil Informática y Telecomunicaciones con formación en Ciberseguridad. Apasionado por entender, romper y mejorar sistemas para hacerlos más seguros.</p>
-            <blockquote class="mt-6 italic text-gray-600 dark:text-gray-400 border-l-4 border-gray-300 dark:border-gray-600 pl-4">
-              "The human factor is truly security's weakest link." – Kevin Mitnick
-            </blockquote>
+    <div class="container relative z-10">
+      <div class="w-full md:flex md:items-center gap-16 mb-10">
+        <div class="text-pretty leading-9">
+          <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+            Hola, soy Ignacio 'tiago' Santiago!
+          </h1>
+
+          <Prose>
+            <div class="text-lg">
+              <p>💻 Estudiante de Ingeniería Civil Informática y Telecomunicaciones con formación en Ciberseguridad. Apasionado por entender, romper y mejorar sistemas para hacerlos más seguros.</p>
+              <blockquote class="mt-6 italic text-gray-600 dark:text-gray-400 border-l-4 border-gray-300 dark:border-gray-600 pl-4">
+                "The human factor is truly security's weakest link." – Kevin Mitnick
+              </blockquote>
+            </div>
+          </Prose>
+        </div>
+        <Image src={Ava} alt="Ignacio Santiago" width={300} loading="eager" class="rounded-3xl shadow-2xl border border-green-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out" />
+      </div>
+
+      <main>
+        <div class='mt-6 mb-12'>
+          <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700">
+            <h2 class="text-lg font-bold mb-3 font-extrabold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Publicaciones Recientes</h2>
+            <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">Todas las publicaciones &raquo;</a>
           </div>
-        </Prose>
-      </div>
-      <Image src={Ava} alt="Ignacio Santiago" width={300} loading="eager" class="rounded-3xl shadow-2xl border border-green-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out"/>
-		</div>
-		<main>
-      <div class='mt-6 mb-12'>
-        <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700">
-          <h2 class="text-lg font-bold mb-3 font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Publicaciones Recientes</h2>
-          <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">Todas las publicaciones &raquo;</a>
-        </div>
-        <div>
-          {
-            posts.map((post: BlogPost) => (
+          <div>
+            {posts.map((post: BlogPost) => (
               <PostItem post={post} />
-            ))
-          }      
+            ))}
+          </div>
         </div>
-        <div class="text-right">
+
+        <div>
+          <div class="flex justify-between gap-2 mb-1">
+            <h2 class="text-lg font-bold mb-3 font-extrabold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Mis Proyectos</h2>
+            <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">Todos los proyectos &raquo;</a>
+          </div>
+          <ProjectList projects={top6Projects} />
         </div>
-      </div>
-      <div>
-        <div class="flex justify-between gap-2 mb-1">
-          <h2 class="text-lg font-bold mb-3 font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Mis Proyectos</h2>
-          <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">Todos los proyectos &raquo;</a>
-        </div>
-        <ProjectList projects={top6Projects}/>
-      </div>
-		</main>
-	</div>
+      </main>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
+  /* ======= Estilos generales ======= */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   .animate-fadeIn {
     animation: fadeIn 1s ease forwards;
   }
-
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
-
-  /* Terminal-style text cursor effect for fun */
   h1::after {
     content: "_";
     color: #22c55e;
     animation: blink 1.2s infinite;
   }
-
   @keyframes blink {
     50% { opacity: 0; }
   }
+
+  /* ======= Canvas de partículas ======= */
+  #cyber-particles {
+    pointer-events: none;
+    opacity: 0.3;
+  }
 </style>
+
+<script>
+  const canvas = document.getElementById('cyber-particles');
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  const particles = Array.from({ length: 100 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    speed: 0.5 + Math.random() * 1,
+    size: 1 + Math.random() * 2,
+    alpha: 0.3 + Math.random() * 0.7
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const p of particles) {
+      ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`; // verde-emerald
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      p.y -= p.speed;
+      if (p.y < 0) {
+        p.y = canvas.height;
+        p.x = Math.random() * canvas.width;
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+</script>
