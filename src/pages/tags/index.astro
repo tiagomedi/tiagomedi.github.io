@@ -47,14 +47,14 @@ for (const post of allPosts) {
 	}
 }
 const groupedTags  = groupTagsByFirstLetter(Object.values(mappedTags))
-const title = `Etiquetas / Tags`;
+const title = `~# Etiquetas / Tags`;
 const description = 'Etiquetas Claves: palabras clave breves para clasificar y facilitar la búsqueda de proyectos.'
 ---
 
 <BaseLayout title={title} description={description}>
 	<div class='container'>
     <div class="mb-10">
-      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+      <h1 class="text-3xl font-bold mb-2 text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">{title}</h1>
       <p class="text-zinc-700 dark:text-zinc-300 text-lg">{description}</p>
     </div>
     <div>
@@ -80,3 +80,29 @@ const description = 'Etiquetas Claves: palabras clave breves para clasificar y f
     </div>
 	</div>
 </BaseLayout>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  /* Terminal-style text cursor effect for fun */
+  h1::after {
+    content: "_";
+    color: #22c55e;
+    animation: blink 1.2s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>

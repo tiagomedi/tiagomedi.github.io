@@ -20,7 +20,10 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
 	<div class='container'>
 		<div class='w-full md:flex md:items-center gap-16 mb-10'>
       <div class="text-pretty leading-9">
-        <h1 class="text-4xl font-bold mb-4">Hola 👋, soy Ignacio 'tiago' Santiago! </h1>
+        <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+          Hola, soy Ignacio 'tiago' Santiago! 
+        </h1>
+
         <Prose>
           <div class="text-lg">
             <p>💻 Estudiante de Ingeniería Civil Informática y Telecomunicaciones con formación en Ciberseguridad. Apasionado por entender, romper y mejorar sistemas para hacerlos más seguros.</p>
@@ -35,7 +38,7 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
 		<main>
       <div class='mt-6 mb-12'>
         <div class="flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700">
-          <h2 class="text-lg font-bold mb-3">Publicaciones Recientes</h2>
+          <h2 class="text-lg font-bold mb-3 font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Publicaciones Recientes</h2>
           <a href="/posts/" class="inline-block py-2 underline dark:prose-invert">Todas las publicaciones &raquo;</a>
         </div>
         <div>
@@ -50,7 +53,7 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
       </div>
       <div>
         <div class="flex justify-between gap-2 mb-1">
-          <h2 class="text-lg font-bold mb-3">Mis Proyectos</h2>
+          <h2 class="text-lg font-bold mb-3 font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Mis Proyectos</h2>
           <a href="/projects/" class="inline-block py-2 underline dark:prose-invert">Todos los proyectos &raquo;</a>
         </div>
         <ProjectList projects={top6Projects}/>
@@ -58,3 +61,29 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
 		</main>
 	</div>
 </BaseLayout>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  /* Terminal-style text cursor effect for fun */
+  h1::after {
+    content: "_";
+    color: #22c55e;
+    animation: blink 1.2s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>

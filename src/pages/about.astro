@@ -2,57 +2,106 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Ava from '@src/assets/img/ava.jpg';
-import Prose from '../components/Prose.astro';
-
 ---
 
-<BaseLayout
-	title="~# Whoami"
-	description=""
->
-  <div class='container'>
-		<main class='prose text-lg dark:prose-invert'>
-      <article>
-        <div class='w-full md:flex md:items-center gap-16 mb-10'>
-          <div class="text-pretty leading-9">
-            <h1 class="text-4xl font-bold mb-4">Hola 👋, soy Ignacio 'tiago' Santiago! </h1>
-            <Prose>
-              <div class="text-lg">
-                <p>Soy estudiante de ultimo año de Ingeniería Civil Informática y Telecomunicaciones, con formación complementaria en Ciberseguridad. Me apasiona entender cómo funcionan los sistemas, romperlos y construir soluciones más seguras e inteligentes.</p>
+<BaseLayout title="~# Whoami" description="">
 
-                <p>Actualmente estoy explorando el mundo de la ciberseguridad ofensiva, con un interés especial en el sector bancario y financiero. También he estado aprendiendo y yendo a charlas sobre el mundo Cuántico, especialmente su potencial impacto en diversas áreas, especialmente en la computación y la seguridad de la información.</p>
+  <div class="container mx-auto px-6 py-10">
+    <main class="prose text-lg dark:prose-invert">
 
-              </div>
-            </Prose>
-          </div>
-          <Image src={Ava} alt="Ignacio Santiago" width={300}  class="rounded-3xl rotate-3 mx-4 md:mx-0"/>
-        </div>     
-        <div>
-
-          <p><b>Creo firmemente en la importancia del networking, la colaboración en comunidad y el aprendizaje continuo</b> como pilares del crecimiento profesional. Participo en charlas, eventos y espacios donde comparto ideas, conecto con otros profesionales y sigo <b>ampliando mi visión del ecosistema digital.</b></p>
-
-          <p>Me motiva la idea de integrar Inteligencia Artifical (automatizar procesos y creación de agentes), computación en la nube y desarrollo de software para fortalecer la seguridad digital y crear herramientas innovadoras.</p> 
+      <!-- SECCIÓN PRINCIPAL -->
+      <article class="flex flex-col md:flex-row items-center gap-10 md:gap-16 mb-14">
         
+        <div class="flex-1 space-y-5 animate-fadeIn">
+          <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
+            ~# Ignacio Santiago Medina 
+          </h1>
+
+          <div class="text-lg leading-relaxed">
+            <p>
+              Soy estudiante de último año de <b>Ingeniería Civil Informática y Telecomunicaciones</b>, con formación en <b>Ciberseguridad</b>. Me apasiona entender cómo funcionan los sistemas, romperlos y construir soluciones más seguras e inteligentes.
+            </p>
+
+            <p>
+              Actualmente exploro el mundo de la <b>ciberseguridad ofensiva</b>, con especial interés en el sector financiero. También me interesa el <b>mundo cuántico</b> y su impacto en la seguridad de la información.
+            </p>
+          </div>
         </div>
-        </article>
 
-        <article class="mt-16">
-          <h2 class="text-3xl font-bold mb-4">Habilidades Técnicas</h2>
-          <Prose>
-            <div class="text-lg">
-              <ul class="list-disc list-inside space-y-2">
-                <li><b>Análisis de Seguridad y Redes:</b> Nmap, Burp Suite, Wireshark, Metasploit (Básico)</li>
-                <li><b>Gobernanza y Frameworks:</b> OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT\&CK (Conceptual)</li>
-                <li><b>Lenguajes y Scripting:</b> Python, Bash (Nvim), Git, C++, Java, JavaScript</li>
-                <li><b>Infraestructura y DevOps:</b> Docker, Linux (Kali, Parrot)</li>
-                <li><b>Bases de Datos y Redes:</b> SQL (MySQL, PostgreSQL), NoSQL (MongoDB), TCP/IP, Modelo OSI</li>
-              </ul>
-            </div>
-          </Prose>
-
-
+        <div class="flex flex-col items-center justify-center">
+          <Image src={Ava} alt="Ignacio Santiago" width={280} class="rounded-3xl shadow-2xl border border-green-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out"/>
+          <!-- <img 
+            src="https://media.giphy.com/media/11BbGyhVmk4iLS/giphy.gif" 
+            alt="Cyber animation" 
+            class="w-48 mt-6 rounded-xl border border-green-400/20 opacity-80 hover:opacity-100 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.4)]" 
+          /> -->
+        </div>
       </article>
+
+      <!-- SECCIÓN NETWORKING / MOTIVACIÓN -->
+      <article class="animate-fadeIn delay-300">
+        <p>
+          <b>Creo firmemente en el networking, la colaboración en comunidad y el aprendizaje continuo</b> como pilares del crecimiento profesional. Participo activamente en charlas y eventos donde comparto ideas, conecto con otros profesionales y amplío mi visión del ecosistema digital.
+        </p>
+
+        <p>
+          Me motiva integrar <b>Inteligencia Artificial</b>, <b>computación en la nube</b> y <b>desarrollo de software</b> para fortalecer la seguridad digital y crear herramientas innovadoras.
+        </p>
+      </article>
+
+      <!-- SECCIÓN HABILIDADES -->
+      <article class="mt-16">
+        <h2 class="text-3xl font-bold mb-6 text-green-400">Habilidades Técnicas</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
+          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-green-400">🔍 Seguridad y Redes</h3>
+            <p>Nmap, Burp Suite, Wireshark, Metasploit (Básico)</p>
+          </div>
+
+          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-green-400">🧭 Frameworks y Gobernanza</h3>
+            <p>OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT&CK (Conceptual)</p>
+          </div>
+
+          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-green-400">💻 Lenguajes y Scripting</h3>
+            <p>Python, Bash (Nvim), Git, C++, Java, JavaScript</p>
+          </div>
+
+          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-3 text-green-400">☁️ Infraestructura y DevOps</h3>
+            <p>Docker, Linux (Kali, Parrot), SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</p>
+          </div>
+        </div>
+      </article>
+
     </main>
   </div>
 </BaseLayout>
 
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  /* Terminal-style text cursor effect for fun */
+  h1::after {
+    content: "_";
+    color: #22c55e;
+    animation: blink 1.2s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+</style>
