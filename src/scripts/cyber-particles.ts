@@ -23,7 +23,7 @@ export function initCyberParticles() {
     particles = Array.from({ length: 1000 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      speed: 0.5 + Math.random() * 1,
+      speed: 0.7 + Math.random() * 1,
       size: 12 + Math.random() * 8,
       alpha: 0.3 + Math.random() * 0.7,
       char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
@@ -51,9 +51,9 @@ export function initCyberParticles() {
       
       ctx.restore();
       
-      p.y -= p.speed;
-      if (p.y < 0) {
-        p.y = canvas.height;
+      p.y += p.speed;
+      if (p.y > canvas.height) {
+        p.y = 0;
         p.x = Math.random() * canvas.width;
         p.char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
         p.rotation = Math.random() > 0.5 ? Math.PI : 0;
