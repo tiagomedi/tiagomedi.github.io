@@ -15,7 +15,7 @@ export function initCyberParticles() {
 
   function resize() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.body.scrollHeight;
     createParticles();
   }
 
