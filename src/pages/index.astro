@@ -19,10 +19,9 @@ const posts = (await getCollection('blog'))
 ---
 
 <BaseLayout title={SITE_TITLE + ' - ' + SITE_TAGLINE} description={SITE_DESCRIPTION}>
-  <div class="relative overflow-hidden">
+  <div class="container overflow-hidden">
     <!-- Canvas de partículas -->
     <canvas id="cyber-particles" class="absolute inset-0 w-full h-full z-0"></canvas>
-
     <div class="container relative z-10">
       <div class="w-full md:flex md:items-center gap-16 mb-10">
         <div class="text-pretty leading-9">

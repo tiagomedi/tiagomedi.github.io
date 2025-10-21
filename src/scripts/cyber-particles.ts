@@ -8,7 +8,7 @@ export function initCyberParticles() {
     return;
   }
 
-  let particles: { x: number; y: number; speed: number; size: number; alpha: number }[] = [];
+  let particles: { x: number; y: number; speed: number; size: number; alpha: number; char: string }[] = [];
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -21,26 +21,30 @@ export function initCyberParticles() {
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       speed: 0.5 + Math.random() * 1,
-      size: 1 + Math.random() * 2,
+      size: 12 + Math.random() * 8,
       alpha: 0.3 + Math.random() * 0.7,
+      char: Math.random() > 0.5 ? '1' : '0',
     }));
   }
 
   window.addEventListener('resize', resize);
-  resize(); // Esto también llama a createParticles
+  resize();
 
   function draw() {
     if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (const p of particles) {
-      ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`; // verde-emerald
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`;
+      ctx.font = `${p.size}px monospace`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(p.char, p.x, p.y);
+      
       p.y -= p.speed;
       if (p.y < 0) {
         p.y = canvas.height;
         p.x = Math.random() * canvas.width;
+        p.char = Math.random() > 0.5 ? '1' : '0';
       }
     }
     requestAnimationFrame(draw);
