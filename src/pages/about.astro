@@ -7,6 +7,7 @@ import Ava from '@src/assets/img/ava.jpg';
 <BaseLayout title="~# Whoami" description="">
 
   <div class="container mx-auto px-6 py-10">
+    <canvas id="cyber-particles" class="absolute inset-0 w-full h-full z-0"></canvas>
     <main class="prose text-lg dark:prose-invert">
 
       <!-- SECCIÓN PRINCIPAL -->
@@ -81,27 +82,31 @@ import Ava from '@src/assets/img/ava.jpg';
 </BaseLayout>
 
 <style>
+  /* ======= Estilos generales ======= */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
   .animate-fadeIn {
     animation: fadeIn 1s ease forwards;
   }
-
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
-
-  /* Terminal-style text cursor effect for fun */
   h1::after {
     content: "_";
     color: #22c55e;
     animation: blink 1.2s infinite;
   }
-
   @keyframes blink {
     50% { opacity: 0; }
   }
+
+  /* ======= Canvas de partículas ======= */
+  #cyber-particles {
+    pointer-events: none;
+    opacity: 0.3;
+  }
 </style>
+
+<script>
+  import { initCyberParticles } from '../scripts/cyber-particles';
+  initCyberParticles();
+</script>
