@@ -8,7 +8,10 @@ export function initCyberParticles() {
     return;
   }
 
-  let particles: { x: number; y: number; speed: number; size: number; alpha: number; char: string }[] = [];
+  // Caracteres de Matrix: números, letras latinas y katakana
+  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+
+  let particles: { x: number; y: number; speed: number; size: number; alpha: number; char: string; rotation: number }[] = [];
 
   function resize() {
     canvas.width = window.innerWidth;
@@ -17,13 +20,14 @@ export function initCyberParticles() {
   }
 
   function createParticles() {
-    particles = Array.from({ length: 100 }, () => ({
+    particles = Array.from({ length: 400 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       speed: 0.5 + Math.random() * 1,
       size: 12 + Math.random() * 8,
       alpha: 0.3 + Math.random() * 0.7,
-      char: Math.random() > 0.5 ? '1' : '0',
+      char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
+      rotation: Math.random() > 0.5 ? Math.PI : 0, // 50% invertidos
     }));
   }
 
@@ -33,18 +37,26 @@ export function initCyberParticles() {
   function draw() {
     if (!ctx) return;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
     for (const p of particles) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rotation);
+      
       ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`;
       ctx.font = `${p.size}px monospace`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText(p.char, p.x, p.y);
+      ctx.fillText(p.char, 0, 0);
+      
+      ctx.restore();
       
       p.y -= p.speed;
       if (p.y < 0) {
         p.y = canvas.height;
         p.x = Math.random() * canvas.width;
-        p.char = Math.random() > 0.5 ? '1' : '0';
+        p.char = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+        p.rotation = Math.random() > 0.5 ? Math.PI : 0;
       }
     }
     requestAnimationFrame(draw);
