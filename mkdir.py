@@ -5,10 +5,10 @@ from datetime import datetime, date
 month = date.today().strftime("%m")
 year = date.today().strftime("%Y")
 day = datetime.now().strftime("%d")
-hour = datetime.now().strftime("%H")
-minute = datetime.now().strftime("%M")
+# hour = datetime.now().strftime("%H")
+# minute = datetime.now().strftime("%M")
 
-folder_name = f'{year}-{month}-{day}-{hour}-{minute}-post'
+folder_name = f'{year}-{month}-{day}-post'
 
 print("***** Nombre del directorio a crear => ", folder_name)
 
