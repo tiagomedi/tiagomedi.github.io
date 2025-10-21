@@ -54,27 +54,48 @@ import Ava from '@src/assets/img/ava.jpg';
       <article class="mt-16">
         <h2 class="text-3xl font-bold mb-6 text-green-400">Habilidades Técnicas</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg">
-          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 backdrop-blur-sm hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
-            <h3 class="text-xl font-semibold mb-3 text-green-400">🔍 Seguridad y Redes</h3>
-            <p>Nmap, Burp Suite, Wireshark, Metasploit (Básico)</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg perspective-1000">
+          <!-- Card 1 -->
+          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
+            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-green-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] backface-hidden">
+              🔍 Seguridad y Redes
+            </div>
+            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
+              Nmap, Burp Suite, Wireshark, Metasploit (Básico)
+            </div>
           </div>
 
-          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
-            <h3 class="text-xl font-semibold mb-3 text-green-400">🧭 Frameworks y Gobernanza</h3>
-            <p>OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT&CK (Conceptual)</p>
+          <!-- Card 2 -->
+          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
+            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-green-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] backface-hidden">
+              🧭 Frameworks y Gobernanza
+            </div>
+            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
+              OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT&CK (Conceptual)
+            </div>
           </div>
 
-          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
-            <h3 class="text-xl font-semibold mb-3 text-green-400">💻 Lenguajes y Scripting</h3>
-            <p>Python, Bash (Nvim), Git, C++, Java, JavaScript</p>
+          <!-- Card 3 -->
+          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
+            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-green-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] backface-hidden">
+              💻 Lenguajes y Scripting
+            </div>
+            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
+              Python, Bash (Nvim), Git, C++, Java, JavaScript
+            </div>
           </div>
 
-          <div class="bg-gray-900/40 dark:bg-gray-800/60 p-5 rounded-2xl shadow-md border border-green-400/30 hover:shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all duration-300">
-            <h3 class="text-xl font-semibold mb-3 text-green-400">☁️ Infraestructura y DevOps</h3>
-            <p>Docker, Linux (Kali, Parrot), SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</p>
+          <!-- Card 4 -->
+          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
+            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-green-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(16,185,129,0.5)] backface-hidden">
+              ☁️ Infraestructura y DevOps
+            </div>
+            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-green-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
+              Docker, Linux (Kali, Parrot), SQL (MySQL, PostgreSQL), NoSQL (MongoDB)
+            </div>
           </div>
         </div>
+
       </article>
 
     </main>
@@ -109,9 +130,34 @@ import Ava from '@src/assets/img/ava.jpg';
     pointer-events: none;
     opacity: 0.3;
   }
+
+  /* Perspectiva 3D para el grid */
+  .perspective-1000 { perspective: 1000px; }
+
+  /* Flip */
+  .card-flip {
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+
+  .card-flip[data-flipped="true"] {
+    transform: rotateY(180deg);
+  }
+
+  /* Caras */
+  .card-front, .card-back {
+    backface-visibility: hidden;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
 </style>
 
 <script>
   import { initCyberParticles } from '../scripts/cyber-particles';
+  import { initCardsToggle } from '../scripts/cards-toggle';
+  
   initCyberParticles();
+  initCardsToggle();
 </script>
