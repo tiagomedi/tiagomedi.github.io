@@ -1,9 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
 	pre,
 	code {
 		font-size: 0.875rem;
+	}
+	
+	html {
+		cursor: url('./img/1.png'), auto;
+	}
+	
+	/* Cursor para elementos clicables cuando pasas el mouse sobre ellos */
+	a, button, [role="button"], input[type="submit"], input[type="button"], 
+	select, [onclick], label[for] {
+		cursor: url('./img/2.png'), auto !important;
+	}
+	
+	/* Cursor durante el clic activo */
+	html:active,
+	a:active, button:active, [role="button"]:active {
+		cursor: url('./img/2.png'), auto !important;
 	}
 }
