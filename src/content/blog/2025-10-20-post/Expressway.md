@@ -1,5 +1,5 @@
 ---
-title: 'Expressway 🔒'
+title: 'Expressway Writeup 🔒'
 description: 'Es un artículo paso a paso para resolver Expressway en Hackthebox Temporada 9'
 tags: ["HackTheBox", "Easy", "Season9", "Linux", "Actived"]
 pubDate: 'Oct 20 2025'
