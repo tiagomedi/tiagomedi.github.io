@@ -39,7 +39,7 @@ for (const post of allPosts) {
 		} else {
 			const _tag: Tag = {
 				value: tagValue,
-				label: tag,
+				label:  tag,
 				postCount: 1
 			};
 			mappedTags[tagValue] = _tag;
@@ -47,8 +47,8 @@ for (const post of allPosts) {
 	}
 }
 const groupedTags  = groupTagsByFirstLetter(Object.values(mappedTags))
-const title = `~# Etiquetas / Tags`;
-const description = 'Etiquetas Claves: palabras clave breves para clasificar y facilitar la búsqueda de proyectos.'
+const title = `root@bitacora_cyber:~# ls -la /tags/ | Tags Index`;
+const description = `[+] Database index loaded | ${Object.keys(mappedTags).length} unique tags detected | Classification system active`
 ---
 
 <BaseLayout title={title} description={description}>

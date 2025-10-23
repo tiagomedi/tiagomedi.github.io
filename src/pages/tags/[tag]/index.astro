@@ -21,8 +21,8 @@ export const getStaticPaths = async () => {
 const { tag } = Astro.params;
 const allPosts: BlogPost[] = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const taggedPosts = allPosts.filter((post) => post.data.tags?.map((tag) => slugify(tag)).includes(tag || ''));
-const title = `All Posts Tagged with ${unslugify(tag || '')}`;
-const description = `All Posts Tagged with ${unslugify(tag || '')}`;
+const title = `root@bitacora_cyber:~# grep -r "${unslugify(tag || '')}" ./posts/*`;
+const description = `[+] Scanning database for tag: ${unslugify(tag || '')} | ${taggedPosts.length} entries found`;
 ---
 
 <BaseLayout
@@ -30,9 +30,49 @@ const description = `All Posts Tagged with ${unslugify(tag || '')}`;
 	description={description}
 >
   <div class='container'>
+    <canvas id="cyber-particles" class="absolute inset-0 w-full z-0"></canvas>
     <div class="mb-10">
-      <h1 class="text-3xl font-bold mb-2">{title}</h1>
+      <h1 class="text-3xl font-bold mb-2 text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">{title}</h1>
+	  <p class="text-zinc-700 dark:text-zinc-300 text-lg">{description}</p>
     </div>
     <PostsByYear posts={taggedPosts}/>
   </div>
 </BaseLayout>
+
+<style>
+  /* ======= Estilos generales ======= */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+  h1::after {
+    content: "_";
+    color: #22c55e;
+    animation: blink 1.2s infinite;
+  }
+  h2::after {
+    content: "_";
+    color: #ffffff;
+    animation: blink 1.2s infinite;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* ======= Canvas de partículas ======= */
+  #cyber-particles {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+</style>
+
+<script>
+  import { initCyberParticles } from '../../../scripts/cyber-particles';
+  initCyberParticles();
+</script>
+
+
