@@ -20,7 +20,7 @@ export function initCyberParticles() {
   }
 
   function createParticles() {
-    particles = Array.from({ length: 100 }, () => ({
+    particles = Array.from({ length: 50 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       speed: 0.7 + Math.random() * 1,
