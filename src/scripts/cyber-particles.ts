@@ -9,7 +9,7 @@ export function initCyberParticles() {
   }
 
   // Caracteres de Matrix: números, letras latinas y katakana
-  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+  const matrixChars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンtiago';
 
   let particles: { x: number; y: number; speed: number; size: number; alpha: number; char: string; rotation: number }[] = [];
 
@@ -27,7 +27,7 @@ export function initCyberParticles() {
       size: 7 + Math.random() * 8,
       alpha: 0.3 + Math.random() * 0.7,
       char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
-      rotation: Math.random() > 0.5 ? Math.PI : 0, // 50% invertidos
+      rotation: Math.random() > 1 ? Math.PI : 0, // 100% invertidos
     }));
   }
 
