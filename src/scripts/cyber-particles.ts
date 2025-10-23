@@ -20,11 +20,11 @@ export function initCyberParticles() {
   }
 
   function createParticles() {
-    particles = Array.from({ length: 1000 }, () => ({
+    particles = Array.from({ length: 300 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       speed: 0.7 + Math.random() * 1,
-      size: 12 + Math.random() * 8,
+      size: 7 + Math.random() * 8,
       alpha: 0.3 + Math.random() * 0.7,
       char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
       rotation: Math.random() > 0.5 ? Math.PI : 0, // 50% invertidos
@@ -42,8 +42,8 @@ export function initCyberParticles() {
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(p.rotation);
-      
-      ctx.fillStyle = `rgba(16, 185, 129, ${p.alpha})`;
+
+      ctx.fillStyle = `rgba(251, 238, 8, ${p.alpha})`;
       ctx.font = `${p.size}px monospace`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
