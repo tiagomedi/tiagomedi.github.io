@@ -43,10 +43,10 @@ const { Content, headings } = await render(post);
                   {
                     (tags || [] )?.map((tag: string) => (
                       <a
-                        class='border border-zinc-300 dark:border-zinc-700 rounded-2xl
-                          text-sm text-zinc-700 dark:text-zinc-300 no-underline px-2 py-0.5
-                          transition-all duration-700
-                        hover:border-zinc-700 dark:hover:border-zinc-300'
+                        class='border border-green-400/40 dark:border-green-400/40 rounded-lg
+                        text-sm text-green-300 dark:text-green-300 no-underline px-3 py-1
+                        transition-all duration-300 bg-gray-800/50
+                        hover:bg-green-400/20 hover:border-green-400 hover:shadow-[0_0_10px_rgba(16,185,129,0.3)]'
                         href={`/tags/${slugify(tag)}`}>
                         {tag}
                       </a>
@@ -190,8 +190,10 @@ const { Content, headings } = await render(post);
 	window.addEventListener('hashchange', (event) => {
 		observeToc(event);
 	});
+</script>
 
-  import { initCyberParticles } from '../scripts/cyber-particles';
+<script>
+  import { initCyberParticles } from '../scripts/cyber-particles2';
   initCyberParticles();
 </script>
 
