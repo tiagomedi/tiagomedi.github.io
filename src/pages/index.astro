@@ -39,7 +39,9 @@ const posts = (await getCollection('blog'))
             </div>
           </Prose>
         </div>
-        <Image src={Ava} alt="Ignacio Santiago" width={300} loading="eager" class="rounded-3xl shadow-2xl border border-purple-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out" />
+        <div class="flex flex-col items-center justify-center">
+                    <Image src={Ava} alt="Ignacio Santiago" width={300} class="rounded-3xl shadow-2xl border border-purple-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out" />
+        </div>
       </div>
 
       <main>
