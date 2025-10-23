@@ -10,12 +10,12 @@ const { title, description, image } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='en' class='dark'>
 	<head>
 		<BaseHead title={title} description={description} image={image} />
 	</head>
 	<body
-		class="bg-white dark:bg-zinc-900 dark:text-zinc-100"
+		class="bg-zinc-900 text-zinc-100"
 	>
 		<Sidebar currentPath={Astro.url.pathname} />
 		<Header/>
