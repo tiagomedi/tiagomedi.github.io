@@ -29,13 +29,14 @@ const { Content, headings } = await render(post);
 
 <BaseLayout title={seoTitle || title} description={description} image={coverImage?.src || undefined}>
 	<div class='container lg:flex gap-10'>
+    <canvas id="cyber-particles" class="absolute inset-0 w-full z-0"></canvas>
 		<main
 			class='overflow-hidden grow'
 		>
 			<article>
 				<Prose>
 					<div>
-						<h1 class='!my-1 leading-tight'>{title}</h1>
+						<h1 class='!my-1 leading-tight bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent'>{title}</h1>
             <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
               {
                 <div class='flex gap-2'>
@@ -100,6 +101,65 @@ const { Content, headings } = await render(post);
 	</div>
 </BaseLayout>
 
+<style>
+  /* ======= Estilos generales ======= */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+  h1::after {
+    content: "_";
+    color: #22c55e;
+    animation: blink 1.2s infinite;
+  }
+  h2::after {
+    content: "_";
+    color: #22c55e;
+    animation: blink 1.2s infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* ======= Canvas de partículas ======= */
+  #cyber-particles {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* ======= Enlaces Cyber ======= */
+  .cyber-link {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, transparent, rgba(16,185,129,0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+  
+  .cyber-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16,185,129,0.3), transparent);
+    transition: left 0.5s;
+  }
+  
+  .cyber-link:hover::before {
+    left: 100%;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+  }
+</style>
+
 <script async is:inline>
 	const anchors = document.querySelectorAll('.prose h2[id], .prose h3[id]');
 	const links = document.querySelectorAll('nav.toc ul li a');
@@ -130,4 +190,9 @@ const { Content, headings } = await render(post);
 	window.addEventListener('hashchange', (event) => {
 		observeToc(event);
 	});
+
+  import { initCyberParticles } from '../scripts/cyber-particles';
+  initCyberParticles();
 </script>
+
+
