@@ -32,10 +32,10 @@ const menu = [
 
 <header
 	id='site-header'
-	class='w-full transition duration-300 z-[999]'
+	class='w-full transition-all duration-300 z-[998] hidden lg:block fixed top-0 left-0 right-0 backdrop-blur-xl bg-white/5 dark:bg-zinc-900/30 border-b border-purple-400/20 shadow-sm'
 >
 	<div class='container'>
-		<nav class='flex gap-4 items-center justify-between py-4'>
+		<nav class='flex gap-4 items-center justify-between py-3'>
 			<div class='flex items-center gap-2'>
 				<a href='/' class='text-purple-400 hover:text-amber-300 transition-colors duration-500' aria-label='Home'>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -48,7 +48,7 @@ const menu = [
 				{
 					menu.map((item) => (
 						<HeaderLink 
-							class="py-2 px-4 text-sm font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-400 transition-colors duration-200" 
+							class="py-2 px-4 text-sm font-mono font-medium text-purple-400 hover:text-amber-300 transition-colors duration-500" 
 							href={item.link}
 						>
 							{item.label}
