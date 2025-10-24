@@ -72,8 +72,8 @@ const { Content, headings } = await render(post);
         {
           GISCUS_REPO &&
             <script
-              id='giscus-script'
-              is:inline
+              // id='giscus-script'
+              // is:inline
               src='https://giscus.app/client.js'
               data-repo={GISCUS_REPO}
               data-repo-id={GISCUS_REPO_ID}
@@ -84,10 +84,11 @@ const { Content, headings } = await render(post);
               data-reactions-enabled='1'
               data-emit-metadata='0'
               data-input-position='bottom'
-              data-theme='preferred_color_scheme'
-              data-lang='en'
+              data-theme='catppuccin_mocha'
+              data-lang='es'
               crossorigin='anonymous'
-              async></script>
+              async>
+            </script>
         }
 
 			</article>
