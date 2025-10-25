@@ -7,4 +7,5 @@ coverImage: './conversor.png'
 ---
 
 > PROXIMAMENTE ...
+
 ![WARNING placeholder](../WARNING.png)
