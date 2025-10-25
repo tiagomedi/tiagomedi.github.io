@@ -6,3 +6,5 @@ pubDate: 'Oct 25 2025'
 coverImage: './conversor.png'
 ---
 
+> PROXIMAMENTE ...
+![WARNING placeholder](../WARNING.png)
