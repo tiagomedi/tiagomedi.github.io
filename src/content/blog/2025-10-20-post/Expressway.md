@@ -1,7 +1,7 @@
 ---
 title: 'Expressway Writeup 🔒'
 description: 'Es un artículo paso a paso para resolver Expressway en Hackthebox Temporada 9'
-tags: ["HackTheBox", "Easy", "Season9", "Linux", "Actived"]
+tags: ["HackTheBox", "Easy", "Linux", "Actived"]
 pubDate: 'Oct 20 2025'
 coverImage: './expressway.png'
 draft: false
@@ -12,7 +12,7 @@ En este tutorial, te mostraré cómo logré obtener el control total sobre la ma
 ---
 ## Resultados Nmap
 ### TCP port scan
-```terminal
+```bash
 ┌──(secbytiago㉿tiaago)-[~]
 └─$ sudo nmap -sC 10.10.11.87 
 Starting Nmap 7.95 ( https://nmap.org ) at 2025-10-18 15:43 -03
@@ -23,7 +23,7 @@ PORT   STATE SERVICE
 22/tcp open  ssh
 ```
 ### UDP port scan
-```terminal
+```bash
 ┌──(secbytiago㉿tiaago)-[~]
 └─$ sudo nmap -sU -p 500 10.10.11.87
 
@@ -35,7 +35,7 @@ PORT    STATE         SERVICE
 500/udp open|filtered isakmp
 ```
 ## Obtener una contraseña usando el modo agresivo de IKE 
-```terminal
+```bash
 ┌──(secbytiago㉿tiaago)-[~]
 └─$ sudo ike-scan -A -P -M 10.10.11.87
 
