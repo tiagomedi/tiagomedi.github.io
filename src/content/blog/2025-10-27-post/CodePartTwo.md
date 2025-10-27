@@ -1,7 +1,7 @@
 ---
 title: 'CodePartTwo Writeup 🔒'
 description: 'Es un artículo paso a paso para resolver CodePartTwo en Hackthebox retirada'
-tags: ["HackTheBox", "Easy", "Linux", "Retired"]
+tags: ["HackTheBox", "Easy", "Linux", "Actived"]
 pubDate: 'Oct 27 2025'
 coverImage: './codepart.png'
 ---

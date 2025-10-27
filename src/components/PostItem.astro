@@ -38,7 +38,7 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props
     
     <div class='flex gap-2 flex-wrap mt-2'>
       {
-        (post.data.tags || [] )?.slice(0, 3).map((tag: string) => (
+        (post.data.tags || [] )?.slice(0, 5).map((tag: string) => (
           <a
             class='post-tag'
             href={`/tags/${slugify(tag)}`}>
