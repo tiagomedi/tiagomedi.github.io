@@ -53,52 +53,225 @@ import Ava from '@src/assets/img/ava.jpg';
       <!-- SECCIÓN HABILIDADES -->
       <article class="mt-16">
         <h2 class="text-3xl font-bold mb-6 text-amber-400">Habilidades Técnicas</h2>
+        <!-- <p class="text-gray-300 mb-8">Arsenal de herramientas dominadas 🔧</p> -->
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg perspective-1000">
-          <!-- Card 1 -->
-          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
-            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-amber-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] backface-hidden">
-              🔍 Seguridad y Redes
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
+          <!-- Skill 1 -->
+          <div class="skill-badge group" data-unlocked="true">
+            <div class="skill-icon">🔍</div>
+            <div class="skill-content">
+              <h4 class="skill-title">Seguridad y Redes</h4>
+              <p class="skill-tools">Nmap, Burp Suite, Wireshark, Metasploit (Básico)</p>
             </div>
-            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
-              Nmap, Burp Suite, Wireshark, Metasploit (Básico)
-            </div>
+            <div class="skill-glow"></div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
-            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-amber-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] backface-hidden">
-              🧭 Frameworks y Gobernanza
+          <!-- Skill 2 -->
+          <div class="skill-badge group" data-unlocked="true">
+            <div class="skill-icon">🧭</div>
+            <div class="skill-content">
+              <h4 class="skill-title">Frameworks y Gobernanza</h4>
+              <p class="skill-tools">OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT&CK (Conceptual)</p>
             </div>
-            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
-              OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT&CK (Conceptual)
-            </div>
+            <div class="skill-glow"></div>
           </div>
 
-          <!-- Card 3 -->
-          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
-            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-amber-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] backface-hidden">
-              💻 Lenguajes y Scripting
+          <!-- Skill 3 -->
+          <div class="skill-badge group" data-unlocked="true">
+            <div class="skill-icon">💻</div>
+            <div class="skill-content">
+              <h4 class="skill-title">Lenguajes y Scripting</h4>
+              <p class="skill-tools">Python, Bash (Nvim), Git, C++, Java, JavaScript</p>
             </div>
-            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
-              Python, Bash (Nvim), Git, C++, Java, JavaScript
-            </div>
+            <div class="skill-glow"></div>
           </div>
 
-          <!-- Card 4 -->
-          <div class="card-flip relative w-full h-40 cursor-pointer" data-flipped="false">
-            <div class="card-front absolute inset-0 bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-amber-400 font-semibold text-xl transition-all duration-500 hover:shadow-[0_0_25px_rgba(147,51,234,0.5)] backface-hidden">
-              ☁️ Infraestructura y DevOps
+          <!-- Skill 4 -->
+          <div class="skill-badge group" data-unlocked="true">
+            <div class="skill-icon">☁️</div>
+            <div class="skill-content">
+              <h4 class="skill-title">Infraestructura y DevOps</h4>
+              <p class="skill-tools">Docker, Linux (Kali, Parrot), SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</p>
             </div>
-            <div class="card-back absolute inset-0 bg-gray-900/70 dark:bg-gray-800/70 rounded-2xl border border-amber-400/30 shadow-md flex items-center justify-center text-gray-300 p-4 text-lg transition-all duration-500 rotate-y-180 backface-hidden">
-              Docker, Linux (Kali, Parrot), SQL (MySQL, PostgreSQL), NoSQL (MongoDB)
-            </div>
+            <div class="skill-glow"></div>
           </div>
         </div>
 
       </article>
 
+      <!-- SECCIÓN CERTIFICACIONES Y CURSOS -->
+      <article class="mt-16">
+        <h2 class="text-3xl font-bold mb-6 text-amber-400">Certificaciones & Cursos</h2>
+        <!-- <p class="text-gray-300 mb-8">Logros desbloqueados en mi trayectoria profesional 🎯</p> -->
+
+        <!-- Categoría: Ciberseguridad -->
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold text-violet-400 mb-4 flex items-center gap-2">
+            <span class="text-2xl">🛡️</span> Ciberseguridad
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🔐</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Introduction to Cybersecurity</h4>
+                <p class="cert-org">Cisco Networking Academy</p>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🐧</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Introduction to Linux</h4>
+                <p class="cert-org">Hack4u Academy</p>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🥷🏻</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Introduction to Hacking</h4>
+                <p class="cert-org">Hack4u Academy</p>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Categoría: Networking & Cloud -->
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold text-violet-400 mb-4 flex items-center gap-2">
+            <span class="text-2xl">☁️</span> Networking & Cloud
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🌐</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Essential Google Cloud Infrastructure: Foundation</h4>
+                <p class="cert-org">Google Cloud Skills Boost</p>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">☁️</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Google Cloud Fundamentals: Core Infrastructure</h4>
+                <p class="cert-org">Google Cloud Skills Boost</p>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Categoría: IA & Desarrollo -->
+        <div class="mb-12">
+          <h3 class="text-xl font-semibold text-violet-400 mb-4 flex items-center gap-2">
+            <span class="text-2xl">🤖</span> IA & Desarrollo
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🐍</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Python Essentials</h4>
+                <p class="cert-org">Cisco Networking Academy</p>
+                <span class="cert-year">2025</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🤖</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Fundamentals of IA Generativa</h4>
+                <p class="cert-org">Microsoft & LinkedIn Academy</p>
+                <span class="cert-year">2024</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+            <div class="cert-badge group" data-unlocked="true">
+              <div class="cert-icon">🐳</div>
+              <div class="cert-content">
+                <h4 class="cert-title">Docker Ultimate</h4>
+                <p class="cert-org">Udemy</p>
+                <span class="cert-year">2024</span>
+              </div>
+              <div class="cert-glow"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </article>
+
+      <!-- SECCIÓN DESCARGAR CV -->
+      <article class="mt-16 mb-12">
+        <h2 class="text-3xl font-bold mb-6 text-amber-400">Descargar CV</h2>
+        <div class="cv-download-section">
+          <div class="cv-card">
+            <div class="cv-icon">📄</div>
+            <h3 class="cv-title">Currículum Vitae</h3>
+            <p class="cv-description">
+              Descarga mi CV completo en formato PDF. Este documento contiene información detallada sobre mi experiencia, formación y proyectos.
+            </p>
+            <button id="download-cv-btn" class="cv-download-btn">
+              <span class="btn-icon">⬇️</span>
+              <span class="btn-text">Descargar CV</span>
+              <div class="btn-glow"></div>
+            </button>
+          </div>
+        </div>
+      </article>
+
     </main>
+  </div>
+
+  <!-- Modal de Autorización -->
+  <div id="cv-modal" class="cv-modal hidden">
+    <div class="cv-modal-overlay"></div>
+    <div class="cv-modal-content">
+      <div class="cv-modal-header">
+        <h3 class="cv-modal-title">🔒 Autorización de Descarga</h3>
+        <button id="close-modal-btn" class="cv-close-btn">&times;</button>
+      </div>
+      
+      <div class="cv-modal-body">
+        <p class="cv-modal-text">
+          Al descargar este currículum, confirmas que:
+        </p>
+        <ul class="cv-modal-list">
+          <li>✅ Utilizarás la información solo con fines profesionales</li>
+          <li>✅ No compartirás el documento sin autorización previa</li>
+          <li>✅ Respetarás la privacidad de los datos personales contenidos</li>
+        </ul>
+        
+        <div class="cv-consent-checkbox">
+          <input type="checkbox" id="consent-checkbox" class="consent-input">
+          <label for="consent-checkbox" class="consent-label">
+            Acepto los términos y condiciones de descarga
+          </label>
+        </div>
+      </div>
+      
+      <div class="cv-modal-footer">
+        <button id="cancel-btn" class="cv-btn cv-btn-cancel">Cancelar</button>
+        <button id="confirm-download-btn" class="cv-btn cv-btn-confirm" disabled>
+          Confirmar y Descargar
+        </button>
+      </div>
+    </div>
   </div>
 </BaseLayout>
 
@@ -131,33 +304,562 @@ import Ava from '@src/assets/img/ava.jpg';
     opacity: 0.3;
   }
 
-  /* Perspectiva 3D para el grid */
-  .perspective-1000 { perspective: 1000px; }
-
-  /* Flip */
-  .card-flip {
-    transform-style: preserve-3d;
-    transition: transform 0.6s ease;
+  /* ======= Habilidades Técnicas - Badges Animados ======= */
+  .skill-badge {
+    position: relative;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.7), rgba(31, 41, 55, 0.5));
+    border: 2px solid rgba(251, 191, 36, 0.4);
+    border-radius: 1.25rem;
+    padding: 2rem 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: unlockBadge 0.6s ease forwards;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .card-flip[data-flipped="true"] {
-    transform: rotateY(180deg);
+  .skill-badge:nth-child(1) { animation-delay: 0.1s; }
+  .skill-badge:nth-child(2) { animation-delay: 0.2s; }
+  .skill-badge:nth-child(3) { animation-delay: 0.3s; }
+  .skill-badge:nth-child(4) { animation-delay: 0.4s; }
+
+  .skill-badge:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: rgba(168, 85, 247, 0.7);
+    box-shadow: 
+      0 0 40px rgba(251, 191, 36, 0.3),
+      0 0 70px rgba(168, 85, 247, 0.2);
   }
 
-  /* Caras */
-  .card-front, .card-back {
-    backface-visibility: hidden;
+  .skill-icon {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.6));
+    transition: all 0.3s ease;
   }
 
-  .card-back {
-    transform: rotateY(180deg);
+  .skill-badge:hover .skill-icon {
+    transform: scale(1.25) rotate(8deg);
+    filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.9));
+  }
+
+  .skill-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .skill-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .skill-tools {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .skill-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.25), transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .skill-badge:hover .skill-glow {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+
+  /* Efecto de pulso para skills */
+  @keyframes pulse-skill {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 35px rgba(168, 85, 247, 0.5);
+    }
+  }
+
+  .skill-badge[data-unlocked="true"] {
+    animation: unlockBadge 0.6s ease forwards, pulse-skill 4s ease-in-out infinite 1.5s;
+  }
+
+  /* ======= Certificaciones - Badges Animados ======= */
+  .cert-badge {
+    position: relative;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.6), rgba(31, 41, 55, 0.4));
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: unlockBadge 0.6s ease forwards;
+  }
+
+  @keyframes unlockBadge {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Delay progresivo para cada badge */
+  .cert-badge:nth-child(1) { animation-delay: 0.1s; }
+  .cert-badge:nth-child(2) { animation-delay: 0.2s; }
+  .cert-badge:nth-child(3) { animation-delay: 0.3s; }
+  .cert-badge:nth-child(4) { animation-delay: 0.4s; }
+  .cert-badge:nth-child(5) { animation-delay: 0.5s; }
+
+  .cert-badge:hover {
+    transform: translateY(-8px) scale(1.05);
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 
+      0 0 30px rgba(168, 85, 247, 0.4),
+      0 0 60px rgba(251, 191, 36, 0.2);
+  }
+
+  .cert-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .cert-badge:hover .cert-icon {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.8));
+  }
+
+  .cert-content {
+    text-align: center;
+  }
+
+  .cert-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+
+  .cert-org {
+    font-size: 0.9rem;
+    color: #a78bfa;
+    margin-bottom: 0.25rem;
+  }
+
+  .cert-year {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    font-weight: 500;
+  }
+
+  /* Efecto glow al hacer hover */
+  .cert-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.3), transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .cert-badge:hover .cert-glow {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+
+  /* Efecto de pulso para badges recientes */
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(251, 191, 36, 0.5);
+    }
+  }
+
+  .cert-badge[data-unlocked="true"]:nth-child(-n+3) {
+    animation: unlockBadge 0.6s ease forwards, pulse-glow 3s ease-in-out infinite 1s;
+  }
+
+  /* ======= Sección Descargar CV ======= */
+  .cv-download-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .cv-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+    border: 2px solid rgba(251, 191, 36, 0.4);
+    border-radius: 1.5rem;
+    padding: 3rem 2.5rem;
+    max-width: 600px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .cv-card:hover {
+    border-color: rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .cv-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.6));
+  }
+
+  .cv-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 1rem;
+  }
+
+  .cv-description {
+    font-size: 1rem;
+    color: #d1d5db;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .cv-download-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    border: 2px solid #fbbf24;
+    border-radius: 0.75rem;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .cv-download-btn:hover {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+    transform: scale(1.05);
+  }
+
+  .btn-icon {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .btn-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.3), transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+  }
+
+  .cv-download-btn:hover .btn-glow {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+
+  /* ======= Modal de Autorización ======= */
+  .cv-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .cv-modal.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .cv-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+  }
+
+  .cv-modal-content {
+    position: relative;
+    background: linear-gradient(135deg, #1f2937, #111827);
+    border: 2px solid rgba(168, 85, 247, 0.5);
+    border-radius: 1.5rem;
+    max-width: 550px;
+    width: 90%;
+    padding: 2rem;
+    box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
+    animation: modalSlideIn 0.4s ease;
+  }
+
+  @keyframes modalSlideIn {
+    from {
+      transform: translateY(-50px) scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  .cv-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+    padding-bottom: 1rem;
+  }
+
+  .cv-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin: 0;
+  }
+
+  .cv-close-btn {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+  }
+
+  .cv-close-btn:hover {
+    color: #fbbf24;
+    transform: rotate(90deg);
+  }
+
+  .cv-modal-body {
+    margin-bottom: 2rem;
+  }
+
+  .cv-modal-text {
+    font-size: 1rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+  }
+
+  .cv-modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .cv-modal-list li {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    padding: 0.5rem 0;
+    border-left: 3px solid #a855f7;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: 0.25rem;
+  }
+
+  .cv-consent-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 0.5rem;
+  }
+
+  .consent-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #a855f7;
+  }
+
+  .consent-label {
+    font-size: 0.95rem;
+    color: #fbbf24;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .cv-modal-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+
+  .cv-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+
+  .cv-btn-cancel {
+    background: rgba(107, 114, 128, 0.2);
+    color: #d1d5db;
+    border: 1px solid rgba(107, 114, 128, 0.5);
+  }
+
+  .cv-btn-cancel:hover {
+    background: rgba(107, 114, 128, 0.3);
+    border-color: rgba(107, 114, 128, 0.7);
+  }
+
+  .cv-btn-confirm {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: white;
+    border: 1px solid #fbbf24;
+  }
+
+  .cv-btn-confirm:hover:not(:disabled) {
+    background: linear-gradient(135deg, #7c3aed, #6d28d9);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .cv-btn-confirm:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(107, 114, 128, 0.3);
+    border-color: rgba(107, 114, 128, 0.5);
+  }
+
+  .hidden {
+    display: none !important;
   }
 </style>
 
 <script>
   import { initCyberParticles } from '../scripts/cyber-particles';
-  import { initCardsToggle } from '../scripts/cards-toggle';
   
   initCyberParticles();
-  initCardsToggle();
+
+  // ======= Funcionalidad del Modal de CV =======
+  document.addEventListener('DOMContentLoaded', () => {
+    const downloadBtn = document.getElementById('download-cv-btn');
+    const modal = document.getElementById('cv-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const cancelBtn = document.getElementById('cancel-btn');
+    const confirmBtn = document.getElementById('confirm-download-btn') as HTMLButtonElement;
+    const consentCheckbox = document.getElementById('consent-checkbox') as HTMLInputElement;
+    const modalOverlay = document.querySelector('.cv-modal-overlay');
+
+    // Abrir modal
+    downloadBtn?.addEventListener('click', () => {
+      modal?.classList.remove('hidden');
+      modal?.classList.add('active');
+    });
+
+    // Cerrar modal
+    const closeModal = () => {
+      modal?.classList.remove('active');
+      setTimeout(() => {
+        modal?.classList.add('hidden');
+        if (consentCheckbox) consentCheckbox.checked = false;
+        if (confirmBtn) confirmBtn.disabled = true;
+      }, 300);
+    };
+
+    closeModalBtn?.addEventListener('click', closeModal);
+    cancelBtn?.addEventListener('click', closeModal);
+    modalOverlay?.addEventListener('click', closeModal);
+
+    // Habilitar/deshabilitar botón de confirmación
+    consentCheckbox?.addEventListener('change', () => {
+      if (confirmBtn) {
+        confirmBtn.disabled = !consentCheckbox.checked;
+      }
+    });
+
+    // Confirmar y descargar
+    confirmBtn?.addEventListener('click', () => {
+      if (consentCheckbox?.checked) {
+        // Aquí va la lógica de descarga
+        // Reemplaza 'cv.pdf' con la ruta real de tu CV
+        const link = document.createElement('a');
+        link.href = '/cv.pdf'; // Asegúrate de tener este archivo en /public/cv.pdf
+        link.download = 'CV_Ignacio_Santiago_Medina.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Mensaje de éxito (opcional)
+        alert('✅ Descarga iniciada. Gracias por tu interés!');
+        
+        // Cerrar modal
+        closeModal();
+      }
+    });
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal?.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  });
 </script>
