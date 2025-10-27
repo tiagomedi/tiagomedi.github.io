@@ -9,7 +9,6 @@ draft: false
 
 En este tutorial, te mostraré cómo logré obtener el control total sobre la maquina "Expressway" en HackTheBox Season 9.
 
----
 ## Resultados Nmap
 ### TCP port scan
 ```bash

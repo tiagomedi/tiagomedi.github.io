@@ -8,6 +8,49 @@
 		font-size: 0.875rem;
 	}
 	
+	/* Estilo de ventana macOS para bloques de código */
+	pre {
+		position: relative;
+		padding-top: 2.5rem !important;
+		border-radius: 0.5rem;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	}
+	
+	pre::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 2rem;
+		background: linear-gradient(to bottom, #e4e4e7 0%, #d4d4d8 100%);
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+		border-bottom: 1px solid #a1a1aa;
+	}
+	
+	.dark pre::before {
+		background: linear-gradient(to bottom, #3f3f46 0%, #27272a 100%);
+		border-bottom: 1px solid #18181b;
+	}
+	
+	pre::after {
+		content: '';
+		position: absolute;
+		top: 0.75rem;
+		left: 0.75rem;
+		width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 50%;
+		background: #ff5f56;
+		box-shadow: 
+			1.25rem 0 0 #ffbd2e,
+			2.5rem 0 0 #27c93f,
+			0 0 0 1px rgba(0, 0, 0, 0.1),
+			1.25rem 0 0 1px rgba(0, 0, 0, 0.1),
+			2.5rem 0 0 1px rgba(0, 0, 0, 0.1);
+	}
+	
 	html {
 		cursor: url('./img/1.png'), auto;
 	}
