@@ -57,14 +57,14 @@
 	
 	/* Cursor para elementos clicables cuando pasas el mouse sobre ellos */
 	a, button, [role="button"], input[type="submit"], input[type="button"], 
-	select, [onclick], label[for], .card-flip, .skill-badge, .cert-badge {
+	select, [onclick], label[for], .card-flip, .skill-badge, .cert-badge, .project-badge {
 		cursor: url('./img/2.png'), auto !important;
 	}
 	
 	/* Cursor durante el clic activo */
 	html:active,
 	a:active, button:active, [role="button"]:active, .card-flip:active,
-	.skill-badge:active, .cert-badge:active {
+	.skill-badge:active, .cert-badge:active, .project-badge:active {
 		cursor: url('./img/2.png'), auto !important;
 	}
 }
