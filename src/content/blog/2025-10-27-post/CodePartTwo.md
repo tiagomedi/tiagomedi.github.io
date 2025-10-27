@@ -8,7 +8,7 @@ coverImage: ''
 
 En este tutorial, te mostraré cómo logré obtener el control total sobre la maquina "CodePartTwo" en HackTheBox Season 9.
 
-# Escaneo Nmap
+## Escaneo Nmap
 ```bash
 ┌──(root㉿tiaago)-[/home/secbytiago/Descargas]
 └─# nmap -sV -sC -A 10.10.11.82
