@@ -2,34 +2,254 @@
 import { slugify } from '../utils';
 import FormattedDate from './FormattedDate.astro';
 import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 
 type BlogPost = CollectionEntry<'blog'>;
 const { post }: Record<string, any> | { post: BlogPost } = Astro.props
 ---
-<div class='flex flex-col sm:flex-row gap-2 sm:items-center py-4 mb-3 px-4 capitalize 
-            bg-gray-900/40 dark:bg-gray-800/60 rounded-xl border border-purple-400/30 
-            shadow-md transition-all duration-300 hover:shadow-[0_0_20px_rgba(147,51,234,0.4)] 
-            hover:border-purple-400/50'>        
-  <div class='text-purple-400 text-sm w-24 shrink-0 font-mono'>
-    <FormattedDate date={post.data.pubDate} />
+<div class='post-badge group' data-unlocked="true">
+  {post.data.coverImage ? (
+    <div class="post-image-full">
+      <Image 
+        src={post.data.coverImage} 
+        alt={post.data.title}
+        width={800}
+        height={200}
+        class="post-image"
+      />
+      <div class="post-overlay"></div>
+    </div>
+  ) : (
+    <div class="post-placeholder-full">
+      <span class="placeholder-icon">📄</span>
+    </div>
+  )}
+  
+  <div class='post-content'>
+    <div class='post-date'>
+      <FormattedDate date={post.data.pubDate} />
+    </div>
+    
+    <h3 class='post-title'>
+      <a href={`/${post.id}/`} class='hover:text-purple-400 transition-colors duration-300'>
+        {post.data.title}
+      </a>
+    </h3>
+    
+    <div class='flex gap-2 flex-wrap mt-2'>
+      {
+        (post.data.tags || [] )?.slice(0, 3).map((tag: string) => (
+          <a
+            class='post-tag'
+            href={`/tags/${slugify(tag)}`}>
+            #{tag}
+          </a>
+        ))
+      }
+    </div>
   </div>
-  <h3 class='font-medium grow text-gray-200 dark:text-gray-100'>
-    <a href={`/${post.id}/`} class='hover:text-purple-400 transition-colors duration-300'>
-      {post.data.title}
-    </a>
-  </h3>
-  <div class='flex gap-2 shrink-0 flex-wrap'>
-    {
-      (post.data.tags || [] )?.map((tag: string) => (
-        <a
-          class='border border-purple-400/40 dark:border-purple-400/40 rounded-lg
-          text-sm text-purple-300 dark:text-purple-300 no-underline px-3 py-1
-          transition-all duration-300 bg-gray-800/50
-          hover:bg-purple-400/20 hover:border-purple-400 hover:shadow-[0_0_10px_rgba(147,51,234,0.3)]'
-          href={`/tags/${slugify(tag)}`}>
-          #{tag}
-        </a>
-      ))
-    }
-  </div>
+  
+  <div class="post-glow"></div>
 </div>
+
+<style>
+  /* ======= Posts - Badges Animados ======= */
+  .post-badge {
+    position: relative;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.7), rgba(31, 41, 55, 0.5));
+    border: 2px solid rgba(168, 85, 247, 0.4);
+    border-radius: 0.875rem;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    animation: unlockPost 0.6s ease forwards;
+    margin-bottom: 0.75rem;
+    min-height: 140px;
+  }
+
+  @keyframes unlockPost {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .post-badge:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: rgba(251, 191, 36, 0.6);
+    box-shadow: 
+      0 0 20px rgba(168, 85, 247, 0.3),
+      0 0 40px rgba(251, 191, 36, 0.15);
+  }
+
+  .post-image-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+  }
+
+  .post-badge:hover .post-image {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+
+  .post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 24, 39, 0.3) 0%,
+      rgba(17, 24, 39, 0.7) 50%,
+      rgba(17, 24, 39, 0.9) 100%
+    );
+    transition: all 0.3s ease;
+  }
+
+  .post-badge:hover .post-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(17, 24, 39, 0.4) 0%,
+      rgba(17, 24, 39, 0.75) 50%,
+      rgba(17, 24, 39, 0.95) 100%
+    );
+  }
+
+  .post-placeholder-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(251, 191, 36, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+
+  .placeholder-icon {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .post-badge:hover .placeholder-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.8));
+  }
+
+  .post-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 140px;
+  }
+
+  .post-date {
+    font-size: 0.75rem;
+    color: #d8b4fe;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .post-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fbbf24;
+    line-height: 1.3;
+    margin-bottom: 0.35rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .post-title a {
+    text-decoration: none;
+  }
+
+  .post-tag {
+    border: 1px solid rgba(168, 85, 247, 0.6);
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    color: #e9d5ff;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.3s ease;
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(4px);
+    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .post-tag:hover {
+    background: rgba(168, 85, 247, 0.3);
+    border-color: #fbbf24;
+    color: #fbbf24;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .post-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.2), transparent 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .post-badge:hover .post-glow {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+
+  /* Efecto de pulso para posts */
+  @keyframes pulse-post {
+    0%, 100% {
+      box-shadow: 0 0 12px rgba(168, 85, 247, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+  }
+
+  .post-badge[data-unlocked="true"] {
+    animation: unlockPost 0.6s ease forwards, pulse-post 4s ease-in-out infinite 2s;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .post-badge {
+      min-height: 160px;
+    }
+    
+    .post-content {
+      min-height: 160px;
+      padding: 1.25rem;
+    }
+  }
+</style>

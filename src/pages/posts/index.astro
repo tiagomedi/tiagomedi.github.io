@@ -18,8 +18,42 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
   <div class='container'>
     <canvas id="cyber-particles" class="absolute inset-0 w-full z-0"></canvas>
     <div class="mb-10 flex-1 space-y-5 animate-fadeIn">
-      <h1 class="text-3xl font-bold mb-2 text-4xl font-extrabold mb-2 bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent">{title}</h1>
-      <p class="text-zinc-700 dark:text-zinc-300 text-lg">{description}</p>
+      <div class="flex justify-between items-start gap-4">
+        <div>
+          <h1 class="text-3xl font-bold mb-2 text-4xl font-extrabold mb-2 bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent">{title}</h1>
+          <p class="text-zinc-700 dark:text-zinc-300 text-lg">{description}</p>
+        </div>
+        
+        <!-- Botón de cambio de vista -->
+        <div class="flex gap-2 shrink-0">
+          <button 
+            id="view-list-btn" 
+            class="view-toggle-btn active"
+            title="Vista Lista"
+            aria-label="Vista Lista">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+          </button>
+          <button 
+            id="view-grid-btn" 
+            class="view-toggle-btn"
+            title="Vista Cuadrícula"
+            aria-label="Vista Cuadrícula">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <PostsByYear posts={posts}/>
   </div>
@@ -48,10 +82,77 @@ const posts = (await getCollection('blog')).sort((a: BlogPost, b: BlogPost) => b
     pointer-events: none;
     opacity: 0.3;
   }
+
+  /* ======= Botones de cambio de vista ======= */
+  .view-toggle-btn {
+    padding: 0.75rem;
+    background: rgba(17, 24, 39, 0.7);
+    border: 2px solid rgba(156, 156, 156, 0.4);
+    border-radius: 0.5rem;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .view-toggle-btn:hover {
+    border-color: rgba(251, 191, 36, 0.6);
+    color: #fbbf24;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .view-toggle-btn.active {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: #fbbf24;
+    color: #fbbf24;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  }
+
+  .view-toggle-btn svg {
+    transition: all 0.3s ease;
+  }
+
+  .view-toggle-btn:hover svg {
+    transform: scale(1.1);
+  }
 </style>
 
 <script>
   import { initCyberParticles } from '../../scripts/cyber-particles2';
   initCyberParticles();
+
+  // Funcionalidad de cambio de vista
+  document.addEventListener('DOMContentLoaded', () => {
+    const listBtn = document.getElementById('view-list-btn');
+    const gridBtn = document.getElementById('view-grid-btn');
+    const postsContainer = document.querySelector('.posts-container');
+
+    // Cargar vista guardada del localStorage
+    const savedView = localStorage.getItem('postsView') || 'list';
+    if (savedView === 'grid') {
+      postsContainer?.classList.add('grid-view');
+      listBtn?.classList.remove('active');
+      gridBtn?.classList.add('active');
+    }
+
+    // Cambiar a vista lista
+    listBtn?.addEventListener('click', () => {
+      postsContainer?.classList.remove('grid-view');
+      listBtn.classList.add('active');
+      gridBtn?.classList.remove('active');
+      localStorage.setItem('postsView', 'list');
+    });
+
+    // Cambiar a vista grid
+    gridBtn?.addEventListener('click', () => {
+      postsContainer?.classList.add('grid-view');
+      gridBtn.classList.add('active');
+      listBtn?.classList.remove('active');
+      localStorage.setItem('postsView', 'grid');
+    });
+  });
 </script>
 
