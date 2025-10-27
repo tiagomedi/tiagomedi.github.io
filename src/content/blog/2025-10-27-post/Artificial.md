@@ -3,7 +3,7 @@ title: 'Artificial Writeup'
 description: 'Es un artículo paso a paso para resolver Artificial en Hackthebox retirada'
 tags: ["HackTheBox", "Easy", "Linux", "Retired"]
 pubDate: 'Oct 27 2025'
-coverImage: ''
+coverImage: './artificial.png'
 ---
 
 En este tutorial, te mostraré cómo logré obtener el control total sobre la maquina "Artificial" en HackTheBox Season 9.
