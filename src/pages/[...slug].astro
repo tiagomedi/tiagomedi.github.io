@@ -36,17 +36,17 @@ const { Content, headings } = await render(post);
 			<article>
 				<Prose>
 					<div>
-						<h1 class='!my-1 leading-tight bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent'>{title}</h1>
+						<h1 class='!my-1 leading-tight bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent'>{title}</h1>
             <div class='text-sm font-[500] mt-2 sm:mt-0 py-1 md:text-right flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center'>
               {
                 <div class='flex gap-2'>
                   {
                     (tags || [] )?.map((tag: string) => (
                       <a
-                        class='border border-purple-400/40 dark:border-purple-400/40 rounded-lg
-                        text-sm text-purple-300 dark:text-purple-300 no-underline px-3 py-1
+                        class='border border-yellow-400/40 dark:border-yellow-400/40 rounded-lg
+                        text-sm text-yellow-300 dark:text-yellow-300 no-underline px-3 py-1
                         transition-all duration-300 bg-gray-800/50
-                        hover:bg-purple-400/20 hover:border-purple-400 hover:shadow-[0_0_10px_rgba(147,51,234,0.3)]'
+                        hover:bg-yellow-400/20 hover:border-yellow-400 hover:shadow-[0_0_10px_rgba(234,179,8,0.3)]'
                         href={`/tags/${slugify(tag)}`}>
                         {tag}
                       </a>
@@ -113,12 +113,12 @@ const { Content, headings } = await render(post);
   }
   h1::after {
     content: "_";
-    color: #a855f7;
+    color: #facc15;
     animation: blink 1.2s infinite;
   }
   h2::after {
     content: "_";
-    color: #a855f7;
+    color: #facc15;
     animation: blink 1.2s infinite;
   }
   @keyframes blink {

@@ -23,110 +23,183 @@ const posts = (await getCollection('blog'))
     <!-- Canvas de partículas -->
     <canvas id="cyber-particles" class="absolute inset-0 w-full z-0"></canvas>
     <div class="container relative z-10">
-      <div class="w-full md:flex md:items-center gap-16 mb-10">
-        <div class="text-pretty leading-9">
-          <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent">
-            Hola 👋, soy Ignacio Santiago!
-          </h1>
-          <p class="text-lg font-mono text-purple-400">$ whoami → <span class="text-violet-300">tiaag0</span></p>
-            
-          <Prose>
-            <div class="text-lg">
-              <p>💻 Estudiante de Ingeniería Civil Informática y Telecomunicaciones con formación en Ciberseguridad. Apasionado por entender, romper y mejorar sistemas para hacerlos más seguros.</p>
-              <blockquote class="mt-4 text-sm font-mono text-gray-600 dark:text-gray-400 border-l-4 border-purple-400/50 dark:border-purple-400/50 pl-3 bg-gray-900/20 dark:bg-gray-800/20 py-1.5 rounded-r">
-                <span class="text-purple-400">~#</span> <span class="italic text-xs">"The human factor is truly security's weakest link."</span> <span class="text-purple-300 text-xs">— Kevin Mitnick</span>
-              </blockquote>
+      <!-- Hero Section -->
+      <section class="min-h-[80vh] flex items-center justify-center mb-20">
+        <div class="w-full grid md:grid-cols-2 gap-12 items-center">
+          <!-- Contenido Principal -->
+          <div class="space-y-6 order-2 md:order-1">
+            <div class="space-y-2">
+              <p class="text-sm font-mono text-yellow-400 uppercase tracking-wider">Ciberseguridad & Infraestructura</p>
+              <h1 class="text-5xl md:text-6xl font-black leading-tight">
+                <span class="block text-white">Hola, soy</span>
+                <span class="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent animate-gradient">
+                  Ignacio Santiago
+                </span>
+              </h1>
+              <p class="text-xl font-mono text-yellow-300/80">
+                <span class="text-yellow-400">$</span> whoami → <span class="text-yellow-300">tiaag0</span>
+              </p>
             </div>
-          </Prose>
+            
+            <div class="space-y-4">
+              <p class="text-lg text-gray-300 leading-relaxed">
+                💻 Estudiante de Ingeniería Civil Informática y Telecomunicaciones especializado en <span class="text-yellow-400 font-semibold">Ciberseguridad</span>. 
+                Apasionado por descubrir vulnerabilidades y construir sistemas más seguros.
+              </p>
+              
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span class="px-4 py-2 bg-yellow-400/10 border border-yellow-400/30 rounded-lg text-sm font-mono text-yellow-300 hover:bg-yellow-400/20 transition-all">
+                  Pentesting
+                </span>
+                <span class="px-4 py-2 bg-yellow-400/10 border border-yellow-400/30 rounded-lg text-sm font-mono text-yellow-300 hover:bg-yellow-400/20 transition-all">
+                  Infraestructura
+                </span>
+                <span class="px-4 py-2 bg-yellow-400/10 border border-yellow-400/30 rounded-lg text-sm font-mono text-yellow-300 hover:bg-yellow-400/20 transition-all">
+                  Desarrollo Software
+                </span>
+                <span class="px-4 py-2 bg-yellow-400/10 border border-yellow-400/30 rounded-lg text-sm font-mono text-yellow-300 hover:bg-yellow-400/20 transition-all">
+                  Innovación & IA
+                </span>
+              </div>
+            </div>
+
+            <div class="flex gap-4 pt-6">
+              <a href="/posts/" class="group px-6 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:shadow-[0_0_30px_rgba(234,179,8,0.5)] transition-all duration-300 hover:scale-105">
+                <span class="flex items-center gap-2">
+                  Ver Posts
+                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                  </svg>
+                </span>
+              </a>
+              <a href="/projects/" class="px-6 py-3 border-2 border-yellow-400/50 text-yellow-400 font-bold rounded-lg hover:bg-yellow-400/10 hover:border-yellow-400 transition-all duration-300 hover:scale-105">
+                Mis Proyectos
+              </a>
+            </div>
+
+            <blockquote class="mt-8 text-sm font-mono text-gray-400 border-l-4 border-yellow-400/50 pl-4 py-2 bg-gray-900/20 rounded-r italic">
+              <span class="text-yellow-400">"</span>The human factor is truly security's weakest link<span class="text-yellow-400">"</span>
+              <span class="block text-xs text-yellow-300 mt-1">— Kevin Mitnick</span>
+            </blockquote>
+          </div>
+
+          <!-- Imagen -->
+          <div class="order-1 md:order-2 flex justify-center">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+              <Image 
+                src={Ava} 
+                alt="Ignacio Santiago" 
+                width={400} 
+                loading="eager" 
+                class="relative rounded-3xl shadow-2xl border-2 border-yellow-500/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105" 
+              />
+              <div class="absolute -bottom-4 -right-4 px-4 py-2 bg-yellow-400 text-black font-mono text-sm font-bold rounded-lg shadow-lg">
+                Open to Work!
+              </div>
+            </div>
+          </div>
         </div>
-        <Image src={Ava} alt="Ignacio Santiago" width={300} loading="eager" class="rounded-3xl shadow-2xl border border-purple-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out" />
-      </div>
+      </section>
 
       <main>
-        <div class='mt-6 mb-12'>
-          <div class="flex justify-between gap-2 items-center mb-4">
-            <h2 class="text-lg font-bold mb-3 font-extrabold bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent">Publicaciones Recientes</h2>
-            <a href="/posts/" class="cyber-link inline-block py-2 px-4 text-purple-400 border border-purple-400/50 rounded-lg font-mono text-sm font-semibold hover:bg-purple-400/10 hover:shadow-[0_0_15px_rgba(147,51,234,0.5)] transition-all duration-300 hover:scale-105">
-              [ Ver_Todas ] &raquo;
+        <!-- Sección de Posts -->
+        <section class="mb-20">
+          <div class="flex justify-between items-center mb-8">
+            <div>
+              <h2 class="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
+                Últimas Publicaciones
+              </h2>
+              <p class="text-gray-400 font-mono text-sm">$ cat recent_posts.txt</p>
+            </div>
+            <a href="/posts/" class="group px-5 py-2.5 text-yellow-400 border border-yellow-400/50 rounded-lg font-mono text-sm font-semibold hover:bg-yellow-400/10 hover:shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:scale-105">
+              <span class="flex items-center gap-2">
+                Ver Todas
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
             </a>
           </div>
-          <div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {posts.map((post: BlogPost) => (
               <PostItem post={post} />
             ))}
           </div>
-        </div>
+        </section>
 
-        <div>
-          <div class="flex justify-between gap-2 items-center mb-4">
-            <h2 class="text-lg font-bold mb-3 font-extrabold bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent">Mis Proyectos</h2>
-            <a href="/projects/" class="cyber-link inline-block py-2 px-4 text-purple-400 border border-purple-400/50 rounded-lg font-mono text-sm font-semibold hover:bg-purple-400/10 hover:shadow-[0_0_15px_rgba(147,51,234,0.5)] transition-all duration-300 hover:scale-105">
-              [ Ver_Todos ] &raquo;
+        <!-- Sección de Proyectos -->
+        <section>
+          <div class="flex justify-between items-center mb-8">
+            <div>
+              <h2 class="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
+                Proyectos Destacados
+              </h2>
+              <p class="text-gray-400 font-mono text-sm">$ ls -la ~/projects/</p>
+            </div>
+            <a href="/projects/" class="group px-5 py-2.5 text-yellow-400 border border-yellow-400/50 rounded-lg font-mono text-sm font-semibold hover:bg-yellow-400/10 hover:shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300 hover:scale-105">
+              <span class="flex items-center gap-2">
+                Ver Todos
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
             </a>
           </div>
           <ProjectList projects={top6Projects} />
-        </div>
+        </section>
       </main>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  /* ======= Estilos generales ======= */
+  /* ======= Animaciones ======= */
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
   .animate-fadeIn {
     animation: fadeIn 1s ease forwards;
   }
-  h1::after {
-    content: "_";
-    color: #a855f7;
-    animation: blink 1.2s infinite;
-  }
-  h2::after {
-    content: "_";
-    color: #a855f7;
-    animation: blink 1.2s infinite;
-  }
-  @keyframes blink {
-    50% { opacity: 0; }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
   }
 
   /* ======= Canvas de partículas ======= */
   #cyber-particles {
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.25;
   }
 
-  /* ======= Enlaces Cyber ======= */
-  .cyber-link {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(90deg, transparent, rgba(147,51,234,0.1), transparent);
-    background-size: 200% 100%;
-    animation: shimmer 3s infinite;
-  }
-  
-  .cyber-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(147,51,234,0.3), transparent);
-    transition: left 0.5s;
-  }
-  
-  .cyber-link:hover::before {
-    left: 100%;
+  /* ======= Efectos de brillo ======= */
+  @keyframes glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(234, 179, 8, 0.3),
+                  0 0 40px rgba(234, 179, 8, 0.1);
+    }
+    50% { 
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.5),
+                  0 0 60px rgba(234, 179, 8, 0.2);
+    }
   }
 
-  @keyframes shimmer {
-    0%, 100% { background-position: 0% 0%; }
-    50% { background-position: 100% 0%; }
+  /* ======= Scroll suave ======= */
+  html {
+    scroll-behavior: smooth;
   }
 </style>
 

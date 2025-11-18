@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+	/* Scroll offset para que los títulos no queden ocultos detrás del header */
+	h1, h2, h3, h4, h5, h6 {
+		scroll-margin-top: 7rem;
+	}
+
 	pre,
 	code {
 		font-size: 0.875rem;

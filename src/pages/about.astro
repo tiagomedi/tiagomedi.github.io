@@ -8,213 +8,274 @@ import Ava from '@src/assets/img/ava.jpg';
 
   <div class="container">
     <canvas id="cyber-particles" class="absolute inset-0 w-full z-0"></canvas>
-    <main class="prose text-lg dark:prose-invert">
+    <main class="relative z-10">
 
-      <!-- SECCIÓN PRINCIPAL -->
-      <article class="flex flex-col md:flex-row items-center gap-10 md:gap-16 mb-14">
+      <!-- HERO SECTION -->
+      <section class="mb-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Contenido -->
+          <div class="space-y-6 animate-fadeIn">
+            <div>
+              <p class="text-sm font-mono text-yellow-400 uppercase tracking-wider mb-3">$ cat /about/me.txt</p>
+              <h1 class="text-5xl md:text-6xl font-black leading-tight mb-4">
+                <span class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+                  Ignacio Santiago
+                </span>
+              </h1>
+              <p class="text-xl font-mono text-yellow-300/80 mb-6">
+                <span class="text-yellow-400">→</span> Cybersecurity Enthusiast & Developer
+              </p>
+            </div>
+
+            <div class="space-y-4 text-lg text-gray-300 leading-relaxed">
+              <p>
+                Estudiante de último año de <span class="text-yellow-400 font-semibold">Ingeniería Civil Informática y Telecomunicaciones</span>, especializado en <span class="text-yellow-400 font-semibold">Ciberseguridad</span>.
+              </p>
+              <p>
+                Mi enfoque está en la <span class="text-yellow-400 font-semibold">seguridad ofensiva</span>, análisis de vulnerabilidades y construcción de sistemas resilientes. Exploro constantemente nuevas técnicas en pentesting, red teaming y el impacto de la <span class="text-yellow-400 font-semibold">computación cuántica</span> en la criptografía moderna.
+              </p>
+            </div>
+          </div>
+
+          <!-- Imagen -->
+          <div class="order-first md:order-last flex justify-center">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+              <Image 
+                src={Ava} 
+                alt="Ignacio Santiago" 
+                width={400} 
+                class="relative rounded-3xl shadow-2xl border-2 border-yellow-500/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VALORES Y FILOSOFÍA -->
+      <section class="mb-20 animate-fadeIn">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-3">
+            Mis Valores
+          </h2>
+          <p class="text-gray-400 font-mono text-sm">$ cat core_values.yaml</p>
+        </div>
         
-        <div class="flex-1 space-y-5 animate-fadeIn">
-          <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-amber-400 to-violet-500 bg-clip-text text-transparent">
-            ~# Ignacio Santiago Medina 
-          </h1>
-
-          <div class="text-lg leading-relaxed">
-            <p>
-              Soy estudiante de último año de <b  class="text-violet-400 font-semibold">Ingeniería Civil Informática y Telecomunicaciones</b>, con formación en <b  class="text-violet-400 font-semibold">Ciberseguridad</b>. Me apasiona entender cómo funcionan los sistemas, romperlos y construir soluciones más seguras e inteligentes.
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="value-card">
+            <div class="value-icon">📚</div>
+            <h3 class="value-title">Aprendizaje Continuo</h3>
+            <p class="value-description">
+              Investigación constante de vulnerabilidades y nuevas técnicas. Cada día, una oportunidad para expandir conocimientos.
             </p>
-
-            <p>
-              Actualmente exploro el mundo de la <b  class="text-violet-400 font-semibold">ciberseguridad ofensiva</b>, con especial interés en el sector financiero. También me interesa el <b  class="text-violet-400 font-semibold">mundo cuántico</b> y su impacto en la seguridad de la información.
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">🎯</div>
+            <h3 class="value-title">Auto-organizado & Proactivo</h3>
+            <p class="value-description">
+              Gestión autónoma de proyectos. Tomo iniciativa, propongo soluciones y ejecuto con disciplina.
+            </p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">🚀</div>
+            <h3 class="value-title">Innovación</h3>
+            <p class="value-description">
+              Integración de IA, cloud y desarrollo para crear soluciones de seguridad creativas y escalables.
             </p>
           </div>
         </div>
-
-        <div class="flex flex-col items-center justify-center">
-          <Image src={Ava} alt="Ignacio Santiago" width={300} class="rounded-3xl shadow-2xl border border-purple-500/30 transform rotate-3 hover:rotate-0 transition duration-500 ease-out"/>
-          <!-- <img 
-            src="https://media.giphy.com/media/11BbGyhVmk4iLS/giphy.gif" 
-            alt="Cyber animation" 
-            class="w-48 mt-6 rounded-xl border border-purple-400/20 opacity-80 hover:opacity-100 transition-all duration-300 shadow-[0_0_20px_rgba(147,51,234,0.4)]" 
-          /> -->
-        </div>
-      </article>
-
-      <!-- SECCIÓN NETWORKING / MOTIVACIÓN -->
-      <article class="animate-fadeIn delay-300">
-        <p>
-          <b class="text-violet-400 font-semibold">Creo firmemente en el networking, la colaboración en comunidad y el aprendizaje continuo</b> como pilares del crecimiento profesional. Participo activamente en charlas y eventos donde comparto ideas, conecto con otros profesionales y amplío mi visión del ecosistema digital.
-        </p>
-
-        <p>
-          Me motiva integrar <b  class="text-violet-400 font-semibold">Inteligencia Artificial</b>, <b  class="text-violet-400 font-semibold">computación en la nube</b> y <b  class="text-violet-400 font-semibold">desarrollo de software</b> para fortalecer la seguridad digital y crear herramientas innovadoras.
-        </p>
-      </article>
+      </section>
 
       <!-- SECCIÓN HABILIDADES -->
-      <article class="mt-16">
-        <h2 class="text-3xl font-bold mb-6 text-amber-400">Habilidades Técnicas</h2>
-        <!-- <p class="text-gray-300 mb-8">Arsenal de herramientas dominadas 🔧</p> -->
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-lg">
-          <!-- Skill 1 -->
-          <div class="skill-badge group" data-unlocked="true">
-            <div class="skill-icon">🔍</div>
-            <div class="skill-content">
-              <h4 class="skill-title">Seguridad y Redes</h4>
-              <p class="skill-tools">Nmap, Burp Suite, Wireshark, Metasploit (Básico)</p>
-            </div>
-            <div class="skill-glow"></div>
-          </div>
-
-          <!-- Skill 2 -->
-          <div class="skill-badge group" data-unlocked="true">
-            <div class="skill-icon">🧭</div>
-            <div class="skill-content">
-              <h4 class="skill-title">Frameworks y Gobernanza</h4>
-              <p class="skill-tools">OWASP Top 10, ISO/IEC 27001, NIST, MITRE ATT&CK (Conceptual)</p>
-            </div>
-            <div class="skill-glow"></div>
-          </div>
-
-          <!-- Skill 3 -->
-          <div class="skill-badge group" data-unlocked="true">
-            <div class="skill-icon">💻</div>
-            <div class="skill-content">
-              <h4 class="skill-title">Lenguajes y Scripting</h4>
-              <p class="skill-tools">Python, Bash (Nvim), Git, C++, Java, JavaScript</p>
-            </div>
-            <div class="skill-glow"></div>
-          </div>
-
-          <!-- Skill 4 -->
-          <div class="skill-badge group" data-unlocked="true">
-            <div class="skill-icon">☁️</div>
-            <div class="skill-content">
-              <h4 class="skill-title">Infraestructura y DevOps</h4>
-              <p class="skill-tools">Docker, Linux (Kali, Parrot), SQL (MySQL, PostgreSQL), NoSQL (MongoDB)</p>
-            </div>
-            <div class="skill-glow"></div>
-          </div>
+      <section class="mb-20 animate-fadeIn">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-3">
+            Tech Stack
+          </h2>
+          <p class="text-gray-400 font-mono text-sm">$ visualize --interactive ~/skills/</p>
         </div>
 
-      </article>
+        <div class="skills-graph-container">
+          <!-- Nodo Central -->
+          <div class="central-node">
+            <div class="central-node-content">
+              <div class="central-icon">⚡</div>
+              <div class="central-text">Skills</div>
+            </div>
+          </div>
 
-      <!-- SECCIÓN CERTIFICACIONES Y CURSOS -->
-      <article class="mt-16">
-        <h2 class="text-3xl font-bold mb-6 text-amber-400">Certificaciones & Cursos</h2>
-        <!-- <p class="text-gray-300 mb-8">Logros desbloqueados en mi trayectoria profesional 🎯</p> -->
+          <!-- Nodos de Habilidades -->
+          <div class="skill-node" data-skill="security" data-position="top-left">
+            <div class="node-circle">
+              <span class="node-icon">🔍</span>
+            </div>
+            <div class="node-label">Seguridad</div>
+            <div class="skill-details">
+              <div class="detail-item">Nmap</div>
+              <div class="detail-item">Burp Suite</div>
+              <div class="detail-item">Wireshark</div>
+              <div class="detail-item">Metasploit</div>
+            </div>
+          </div>
+
+          <div class="skill-node" data-skill="frameworks" data-position="top-right">
+            <div class="node-circle">
+              <span class="node-icon">🧭</span>
+            </div>
+            <div class="node-label">Frameworks</div>
+            <div class="skill-details">
+              <div class="detail-item">OWASP</div>
+              <div class="detail-item">ISO 27001</div>
+              <div class="detail-item">NIST</div>
+              <div class="detail-item">MITRE ATT&CK</div>
+            </div>
+          </div>
+
+          <div class="skill-node" data-skill="development" data-position="bottom-left">
+            <div class="node-circle">
+              <span class="node-icon">💻</span>
+            </div>
+            <div class="node-label">Development</div>
+            <div class="skill-details">
+              <div class="detail-item">Python</div>
+              <div class="detail-item">Bash</div>
+              <div class="detail-item">C++</div>
+              <div class="detail-item">Java</div>
+              <div class="detail-item">JavaScript</div>
+            </div>
+          </div>
+
+          <div class="skill-node" data-skill="infrastructure" data-position="bottom-right">
+            <div class="node-circle">
+              <span class="node-icon">☁️</span>
+            </div>
+            <div class="node-label">Infrastructure</div>
+            <div class="skill-details">
+              <div class="detail-item">Docker</div>
+              <div class="detail-item">Linux</div>
+              <div class="detail-item">SQL</div>
+              <div class="detail-item">NoSQL</div>
+              <div class="detail-item">Git</div>
+            </div>
+          </div>
+
+          <!-- Canvas para las líneas de conexión -->
+          <svg class="connection-lines" viewBox="0 0 800 600">
+            <line class="connection-line line-security" x1="400" y1="300" x2="200" y2="150" />
+            <line class="connection-line line-frameworks" x1="400" y1="300" x2="600" y2="150" />
+            <line class="connection-line line-development" x1="400" y1="300" x2="200" y2="450" />
+            <line class="connection-line line-infrastructure" x1="400" y1="300" x2="600" y2="450" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- SECCIÓN CERTIFICACIONES -->
+      <section class="mb-20 animate-fadeIn">
+        <div class="mb-12">
+          <h2 class="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-3">
+            Licencias y Certificaciones
+          </h2>
+          <p class="text-gray-400 font-mono text-sm">$ cat achievements.log</p>
+        </div>
 
         <!-- Categoría: Ciberseguridad -->
         <div class="mb-12">
-          <h3 class="text-xl font-semibold text-violet-400 mb-4 flex items-center gap-2">
-            <span class="text-2xl">🛡️</span> Ciberseguridad
+          <h3 class="text-2xl font-semibold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🛡️</span> Ciberseguridad
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-            <div class="cert-badge group" data-unlocked="true">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🔐</div>
               <div class="cert-content">
                 <h4 class="cert-title">Introduction to Cybersecurity</h4>
                 <p class="cert-org">Cisco Networking Academy</p>
                 <span class="cert-year">2025</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
 
-            <div class="cert-badge group" data-unlocked="true">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🐧</div>
               <div class="cert-content">
                 <h4 class="cert-title">Introduction to Linux</h4>
                 <p class="cert-org">Hack4u Academy</p>
                 <span class="cert-year">2025</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
 
-            <div class="cert-badge group" data-unlocked="true">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🥷🏻</div>
               <div class="cert-content">
                 <h4 class="cert-title">Introduction to Hacking</h4>
                 <p class="cert-org">Hack4u Academy</p>
                 <span class="cert-year">2025</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
-
           </div>
         </div>
 
         <!-- Categoría: Networking & Cloud -->
         <div class="mb-12">
-          <h3 class="text-xl font-semibold text-violet-400 mb-4 flex items-center gap-2">
-            <span class="text-2xl">☁️</span> Networking & Cloud
+          <h3 class="text-2xl font-semibold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">☁️</span> Cloud & Networking
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            
-            <div class="cert-badge group" data-unlocked="true">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🌐</div>
               <div class="cert-content">
-                <h4 class="cert-title">Essential Google Cloud Infrastructure: Foundation</h4>
+                <h4 class="cert-title">Essential Google Cloud Infrastructure</h4>
                 <p class="cert-org">Google Cloud Skills Boost</p>
                 <span class="cert-year">2025</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
 
-            <div class="cert-badge group" data-unlocked="true">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">☁️</div>
               <div class="cert-content">
-                <h4 class="cert-title">Google Cloud Fundamentals: Core Infrastructure</h4>
+                <h4 class="cert-title">Google Cloud Fundamentals</h4>
                 <p class="cert-org">Google Cloud Skills Boost</p>
                 <span class="cert-year">2025</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
-
           </div>
         </div>
 
         <!-- Categoría: IA & Desarrollo -->
-        <div class="mb-12">
-          <h3 class="text-xl font-semibold text-violet-400 mb-4 flex items-center gap-2">
-            <span class="text-2xl">🤖</span> IA & Desarrollo
+        <div>
+          <h3 class="text-2xl font-semibold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🤖</span> IA & Development
           </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            
-            <div class="cert-badge group" data-unlocked="true">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🐍</div>
               <div class="cert-content">
                 <h4 class="cert-title">Python Essentials</h4>
                 <p class="cert-org">Cisco Networking Academy</p>
                 <span class="cert-year">2025</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
 
-            <div class="cert-badge group" data-unlocked="true">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🤖</div>
               <div class="cert-content">
                 <h4 class="cert-title">Fundamentals of IA Generativa</h4>
-                <p class="cert-org">Microsoft & LinkedIn Academy</p>
+                <p class="cert-org">Microsoft & LinkedIn</p>
                 <span class="cert-year">2024</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
 
-            <div class="cert-badge group" data-unlocked="true">
+            <div class="cert-badge" data-unlocked="true">
               <div class="cert-icon">🐳</div>
               <div class="cert-content">
                 <h4 class="cert-title">Docker Ultimate</h4>
                 <p class="cert-org">Udemy</p>
                 <span class="cert-year">2024</span>
               </div>
-              <div class="cert-glow"></div>
             </div>
-
           </div>
         </div>
-
-      </article>
+      </section>
 
       <!-- SECCIÓN DESCARGAR CV -->
       <!-- <article class="mt-16 mb-12">
@@ -276,145 +337,15 @@ import Ava from '@src/assets/img/ava.jpg';
 </BaseLayout>
 
 <style>
-  /* ======= Estilos generales ======= */
+  /* ======= Animaciones Base ======= */
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  .animate-fadeIn {
-    animation: fadeIn 1s ease forwards;
-  }
-  h1::after {
-    content: "_";
-    color: #a855f7;
-    animation: blink 1.2s infinite;
-  }
-  h2::after {
-    content: "_";
-    color: #a855f7;
-    animation: blink 1.2s infinite;
-  }
-  @keyframes blink {
-    50% { opacity: 0; }
-  }
 
-  /* ======= Canvas de partículas ======= */
-  #cyber-particles {
-    pointer-events: none;
-    opacity: 0.3;
-  }
-
-  /* ======= Habilidades Técnicas - Badges Animados ======= */
-  .skill-badge {
-    position: relative;
-    background: linear-gradient(135deg, rgba(17, 24, 39, 0.7), rgba(31, 41, 55, 0.5));
-    border: 2px solid rgba(251, 191, 36, 0.4);
-    border-radius: 1.25rem;
-    padding: 2rem 1.5rem;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-    animation: unlockBadge 0.6s ease forwards;
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .skill-badge:nth-child(1) { animation-delay: 0.1s; }
-  .skill-badge:nth-child(2) { animation-delay: 0.2s; }
-  .skill-badge:nth-child(3) { animation-delay: 0.3s; }
-  .skill-badge:nth-child(4) { animation-delay: 0.4s; }
-
-  .skill-badge:hover {
-    transform: translateY(-10px) scale(1.03);
-    border-color: rgba(168, 85, 247, 0.7);
-    box-shadow: 
-      0 0 40px rgba(251, 191, 36, 0.3),
-      0 0 70px rgba(168, 85, 247, 0.2);
-  }
-
-  .skill-icon {
-    font-size: 3.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.6));
-    transition: all 0.3s ease;
-  }
-
-  .skill-badge:hover .skill-icon {
-    transform: scale(1.25) rotate(8deg);
-    filter: drop-shadow(0 0 25px rgba(168, 85, 247, 0.9));
-  }
-
-  .skill-content {
-    text-align: center;
-    width: 100%;
-  }
-
-  .skill-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #fbbf24;
-    margin-bottom: 0.75rem;
-    line-height: 1.3;
-  }
-
-  .skill-tools {
-    font-size: 0.95rem;
-    color: #d1d5db;
-    line-height: 1.5;
-    font-weight: 400;
-  }
-
-  .skill-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(251, 191, 36, 0.25), transparent 70%);
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  .skill-badge:hover .skill-glow {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 1;
-  }
-
-  /* Efecto de pulso para skills */
-  @keyframes pulse-skill {
-    0%, 100% {
-      box-shadow: 0 0 12px rgba(251, 191, 36, 0.2);
-    }
-    50% {
-      box-shadow: 0 0 18px rgba(168, 85, 247, 0.3);
-    }
-  }
-
-  .skill-badge[data-unlocked="true"] {
-    animation: unlockBadge 0.6s ease forwards, pulse-skill 4s ease-in-out infinite 1.5s;
-  }
-
-  /* ======= Certificaciones - Badges Animados ======= */
-  .cert-badge {
-    position: relative;
-    background: linear-gradient(135deg, rgba(17, 24, 39, 0.6), rgba(31, 41, 55, 0.4));
-    border: 2px solid rgba(168, 85, 247, 0.3);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-    animation: unlockBadge 0.6s ease forwards;
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
   }
 
   @keyframes unlockBadge {
@@ -424,40 +355,428 @@ import Ava from '@src/assets/img/ava.jpg';
     }
   }
 
-  /* Delay progresivo para cada badge */
-  .cert-badge:nth-child(1) { animation-delay: 0.1s; }
-  .cert-badge:nth-child(2) { animation-delay: 0.2s; }
-  .cert-badge:nth-child(3) { animation-delay: 0.3s; }
-  .cert-badge:nth-child(4) { animation-delay: 0.4s; }
-  .cert-badge:nth-child(5) { animation-delay: 0.5s; }
+  .animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+  }
+
+  /* ======= Canvas de partículas ======= */
+  #cyber-particles {
+    pointer-events: none;
+    opacity: 0.25;
+  }
+
+  /* ======= Stats Cards ======= */
+  .stat-card {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.05));
+    border: 2px solid rgba(234, 179, 8, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .stat-card:hover {
+    border-color: rgba(234, 179, 8, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #facc15, #eab308);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ======= Value Cards ======= */
+  .value-card {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+    border: 2px solid rgba(234, 179, 8, 0.3);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+  }
+
+  .value-card:hover {
+    border-color: rgba(234, 179, 8, 0.6);
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
+  }
+
+  .value-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));
+    transition: all 0.3s ease;
+  }
+
+  .value-card:hover .value-icon {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 25px rgba(234, 179, 8, 0.8));
+  }
+
+  .value-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 1rem;
+  }
+
+  .value-description {
+    font-size: 1rem;
+    color: #d1d5db;
+    line-height: 1.7;
+  }
+
+  /* ======= Skills Graph ======= */
+  .skills-graph-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .connection-line {
+    stroke: rgba(234, 179, 8, 0.2);
+    stroke-width: 2;
+    transition: all 0.3s ease;
+  }
+
+  .skill-node.active ~ .connection-lines .connection-line {
+    stroke: rgba(234, 179, 8, 0.1);
+  }
+
+  .skill-node[data-skill="security"].active ~ .connection-lines .line-security,
+  .skill-node[data-skill="frameworks"].active ~ .connection-lines .line-frameworks,
+  .skill-node[data-skill="development"].active ~ .connection-lines .line-development,
+  .skill-node[data-skill="infrastructure"].active ~ .connection-lines .line-infrastructure {
+    stroke: rgba(234, 179, 8, 0.8);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.6));
+  }
+
+  /* Nodo Central */
+  .central-node {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .central-node-content {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(234, 179, 8, 0.1));
+    border: 3px solid rgba(234, 179, 8, 0.6);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.4);
+    animation: pulse-central 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-central {
+    0%, 100% {
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.4);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 50px rgba(234, 179, 8, 0.6);
+      transform: scale(1.05);
+    }
+  }
+
+  .central-icon {
+    font-size: 3rem;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.8));
+  }
+
+  .central-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-top: 0.5rem;
+  }
+
+  /* Nodos de Habilidades */
+  .skill-node {
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .skill-node[data-position="top-left"] {
+    top: 10%;
+    left: 15%;
+  }
+
+  .skill-node[data-position="top-right"] {
+    top: 10%;
+    right: 15%;
+  }
+
+  .skill-node[data-position="bottom-left"] {
+    bottom: 10%;
+    left: 15%;
+  }
+
+  .skill-node[data-position="bottom-right"] {
+    bottom: 10%;
+    right: 15%;
+  }
+
+  .node-circle {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
+    border: 2px solid rgba(234, 179, 8, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    position: relative;
+  }
+
+  .skill-node:hover .node-circle {
+    border-color: rgba(234, 179, 8, 0.8);
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.5);
+    transform: scale(1.1);
+  }
+
+  .skill-node.active .node-circle {
+    border-color: rgba(234, 179, 8, 0.9);
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.7);
+    transform: scale(1.15);
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.3), rgba(234, 179, 8, 0.1));
+  }
+
+  .node-icon {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .skill-node:hover .node-icon,
+  .skill-node.active .node-icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, 0.8));
+  }
+
+  .node-label {
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fbbf24;
+    transition: all 0.3s ease;
+  }
+
+  .skill-node:hover .node-label,
+  .skill-node.active .node-label {
+    color: #facc15;
+    text-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+  }
+
+  /* Detalles de Skills (Brazos del grafo) */
+  .skill-details {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.9));
+    border: 2px solid rgba(234, 179, 8, 0.6);
+    border-radius: 0.75rem;
+    min-width: 150px;
+    box-shadow: 0 0 30px rgba(234, 179, 8, 0.4);
+    z-index: 20;
+    animation: expandDetails 0.3s ease;
+  }
+
+  @keyframes expandDetails {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .skill-node.active .skill-details {
+    display: flex;
+  }
+
+  .skill-node[data-position="top-left"] .skill-details {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+  }
+
+  .skill-node[data-position="top-right"] .skill-details {
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 1rem;
+  }
+
+  .skill-node[data-position="bottom-left"] .skill-details {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+  }
+
+  .skill-node[data-position="bottom-right"] .skill-details {
+    bottom: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    margin-bottom: 1rem;
+  }
+
+  .detail-item {
+    padding: 0.5rem 0.75rem;
+    background: rgba(234, 179, 8, 0.1);
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 0.5rem;
+    color: #fde68a;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    animation: slideIn 0.3s ease backwards;
+  }
+
+  .detail-item:nth-child(1) { animation-delay: 0.05s; }
+  .detail-item:nth-child(2) { animation-delay: 0.1s; }
+  .detail-item:nth-child(3) { animation-delay: 0.15s; }
+  .detail-item:nth-child(4) { animation-delay: 0.2s; }
+  .detail-item:nth-child(5) { animation-delay: 0.25s; }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .detail-item:hover {
+    background: rgba(234, 179, 8, 0.2);
+    border-color: rgba(234, 179, 8, 0.5);
+    transform: translateX(5px);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .skills-graph-container {
+      height: 500px;
+    }
+
+    .central-node-content {
+      width: 90px;
+      height: 90px;
+    }
+
+    .central-icon {
+      font-size: 2.5rem;
+    }
+
+    .node-circle {
+      width: 70px;
+      height: 70px;
+    }
+
+    .node-icon {
+      font-size: 2rem;
+    }
+
+    .skill-node[data-position="top-left"] {
+      top: 5%;
+      left: 10%;
+    }
+
+    .skill-node[data-position="top-right"] {
+      top: 5%;
+      right: 10%;
+    }
+
+    .skill-node[data-position="bottom-left"] {
+      bottom: 5%;
+      left: 10%;
+    }
+
+    .skill-node[data-position="bottom-right"] {
+      bottom: 5%;
+      right: 10%;
+    }
+  }
+
+  /* ======= Certification Badges ======= */
+  .cert-badge {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+    border: 2px solid rgba(234, 179, 8, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+  }
 
   .cert-badge:hover {
-    transform: translateY(-8px) scale(1.05);
-    border-color: rgba(251, 191, 36, 0.6);
-    box-shadow: 
-      0 0 30px rgba(168, 85, 247, 0.4),
-      0 0 60px rgba(251, 191, 36, 0.2);
+    border-color: rgba(234, 179, 8, 0.6);
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
   }
 
   .cert-icon {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 0.75rem;
-    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));
     transition: all 0.3s ease;
   }
 
   .cert-badge:hover .cert-icon {
-    transform: scale(1.2) rotate(5deg);
-    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.8));
-  }
-
-  .cert-content {
-    text-align: center;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 25px rgba(234, 179, 8, 0.8));
   }
 
   .cert-title {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #fbbf24;
     margin-bottom: 0.5rem;
@@ -465,331 +784,15 @@ import Ava from '@src/assets/img/ava.jpg';
   }
 
   .cert-org {
-    font-size: 0.9rem;
-    color: #a78bfa;
-    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    color: #fde68a;
+    margin-bottom: 0.35rem;
   }
 
   .cert-year {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #9ca3af;
     font-weight: 500;
-  }
-
-  /* Efecto glow al hacer hover */
-  .cert-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.3), transparent 70%);
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  .cert-badge:hover .cert-glow {
-    transform: translate(-50%, -50%) scale(1.5);
-    opacity: 1;
-  }
-
-  /* Efecto de pulso para badges recientes */
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 0 10px rgba(168, 85, 247, 0.2);
-    }
-    50% {
-      box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
-    }
-  }
-
-  .cert-badge[data-unlocked="true"]:nth-child(-n+3) {
-    animation: unlockBadge 0.6s ease forwards, pulse-glow 3s ease-in-out infinite 1s;
-  }
-
-  /* ======= Sección Descargar CV ======= */
-  .cv-download-section {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .cv-card {
-    position: relative;
-    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
-    border: 2px solid rgba(251, 191, 36, 0.4);
-    border-radius: 1.5rem;
-    padding: 3rem 2.5rem;
-    max-width: 600px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.4s ease;
-  }
-
-  .cv-card:hover {
-    border-color: rgba(168, 85, 247, 0.6);
-    box-shadow: 0 0 40px rgba(251, 191, 36, 0.3);
-    transform: translateY(-5px);
-  }
-
-  .cv-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.6));
-  }
-
-  .cv-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #fbbf24;
-    margin-bottom: 1rem;
-  }
-
-  .cv-description {
-    font-size: 1rem;
-    color: #d1d5db;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .cv-download-btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
-    border: 2px solid #fbbf24;
-    border-radius: 0.75rem;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .cv-download-btn:hover {
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
-    transform: scale(1.05);
-  }
-
-  .btn-icon {
-    font-size: 1.5rem;
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-  }
-
-  .btn-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(251, 191, 36, 0.3), transparent 70%);
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
-    pointer-events: none;
-  }
-
-  .cv-download-btn:hover .btn-glow {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-
-  /* ======= Modal de Autorización ======= */
-  .cv-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .cv-modal.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .cv-modal-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
-  }
-
-  .cv-modal-content {
-    position: relative;
-    background: linear-gradient(135deg, #1f2937, #111827);
-    border: 2px solid rgba(168, 85, 247, 0.5);
-    border-radius: 1.5rem;
-    max-width: 550px;
-    width: 90%;
-    padding: 2rem;
-    box-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
-    animation: modalSlideIn 0.4s ease;
-  }
-
-  @keyframes modalSlideIn {
-    from {
-      transform: translateY(-50px) scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-  }
-
-  .cv-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(168, 85, 247, 0.3);
-    padding-bottom: 1rem;
-  }
-
-  .cv-modal-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fbbf24;
-    margin: 0;
-  }
-
-  .cv-close-btn {
-    background: none;
-    border: none;
-    color: #9ca3af;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    line-height: 1;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-  }
-
-  .cv-close-btn:hover {
-    color: #fbbf24;
-    transform: rotate(90deg);
-  }
-
-  .cv-modal-body {
-    margin-bottom: 2rem;
-  }
-
-  .cv-modal-text {
-    font-size: 1rem;
-    color: #d1d5db;
-    margin-bottom: 1rem;
-  }
-
-  .cv-modal-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.5rem 0;
-  }
-
-  .cv-modal-list li {
-    font-size: 0.95rem;
-    color: #d1d5db;
-    padding: 0.5rem 0;
-    border-left: 3px solid #a855f7;
-    padding-left: 1rem;
-    margin-bottom: 0.5rem;
-    background: rgba(168, 85, 247, 0.1);
-    border-radius: 0.25rem;
-  }
-
-  .cv-consent-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 1rem;
-    background: rgba(251, 191, 36, 0.1);
-    border: 1px solid rgba(251, 191, 36, 0.3);
-    border-radius: 0.5rem;
-  }
-
-  .consent-input {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: #a855f7;
-  }
-
-  .consent-label {
-    font-size: 0.95rem;
-    color: #fbbf24;
-    cursor: pointer;
-    margin: 0;
-  }
-
-  .cv-modal-footer {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-  }
-
-  .cv-btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-  }
-
-  .cv-btn-cancel {
-    background: rgba(107, 114, 128, 0.2);
-    color: #d1d5db;
-    border: 1px solid rgba(107, 114, 128, 0.5);
-  }
-
-  .cv-btn-cancel:hover {
-    background: rgba(107, 114, 128, 0.3);
-    border-color: rgba(107, 114, 128, 0.7);
-  }
-
-  .cv-btn-confirm {
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
-    color: white;
-    border: 1px solid #fbbf24;
-  }
-
-  .cv-btn-confirm:hover:not(:disabled) {
-    background: linear-gradient(135deg, #7c3aed, #6d28d9);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-    transform: translateY(-2px);
-  }
-
-  .cv-btn-confirm:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background: rgba(107, 114, 128, 0.3);
-    border-color: rgba(107, 114, 128, 0.5);
-  }
-
-  .hidden {
-    display: none !important;
   }
 </style>
 
@@ -797,6 +800,40 @@ import Ava from '@src/assets/img/ava.jpg';
   import { initCyberParticles } from '../scripts/cyber-particles';
   
   initCyberParticles();
+
+  // ======= Interactividad del Grafo de Skills =======
+  document.addEventListener('DOMContentLoaded', () => {
+    const skillNodes = document.querySelectorAll('.skill-node');
+    
+    skillNodes.forEach(node => {
+      node.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        // Toggle active state
+        const isActive = node.classList.contains('active');
+        
+        // Remove active from all nodes
+        skillNodes.forEach(n => n.classList.remove('active'));
+        
+        // Add active to clicked node if it wasn't active
+        if (!isActive) {
+          node.classList.add('active');
+        }
+      });
+    });
+
+    // Close details when clicking outside
+    document.addEventListener('click', () => {
+      skillNodes.forEach(n => n.classList.remove('active'));
+    });
+
+    // Prevent closing when clicking on details
+    document.querySelectorAll('.skill-details').forEach(details => {
+      details.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    });
+  });
 
   // ======= Funcionalidad del Modal de CV =======
   document.addEventListener('DOMContentLoaded', () => {
