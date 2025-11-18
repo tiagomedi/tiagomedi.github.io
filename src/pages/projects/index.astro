@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectList from '../../components/ProjectList.astro';
-import { projects } from './projects';
+import { getProjects } from './projects';
 
+// Obtener proyectos con datos de GitHub
+const projects = await getProjects();
 ---
 
 <BaseLayout
@@ -11,11 +13,31 @@ import { projects } from './projects';
 >
   <div class='container'>
     <canvas id="cyber-particles" class="absolute inset-0 w-full z-0"></canvas>
-    <div class="mb-10 flex-1 space-y-5 animate-fadeIn">
-      <h1 class="text-4xl font-extrabold mb-2 bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">~# Todos Mis Proyectos</h1>
-      <p class="text-zinc-700 dark:text-zinc-300 text-lg">Aquí encontrarás todos mis proyectos: trabajos reales, aportes a código abierto y creaciones personales.</p>
+    <div class="relative z-10">
+      <!-- Hero Header -->
+      <div class="mb-12 animate-fadeIn">
+        <div class="flex items-center gap-3 mb-4">
+          <div>
+            <p class="text-sm font-mono text-yellow-400 uppercase tracking-wider mb-1">$ ls -la ~/projects/</p>
+            <h1 class="text-4xl md:text-5xl font-black bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent">
+              Todos Mis Proyectos
+            </h1>
+          </div>
+        </div>
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl">
+          Aquí encontrarás todos mis proyectos: trabajos reales, aportes a código abierto y creaciones personales. Cada uno refleja mi pasión por la tecnología, la innovación y el aprendizaje continuo.
+        </p>
+        
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-4 mt-6">
+          <div class="stat-badge">
+            <span class="stat-text">{projects.length} Proyectos</span>
+          </div>
+        </div>
+      </div>
+      
+      <ProjectList projects={projects}/>
     </div>
-    <ProjectList projects={projects}/>
   </div>
 </BaseLayout>
 
@@ -28,19 +50,37 @@ import { projects } from './projects';
   .animate-fadeIn {
     animation: fadeIn 1s ease forwards;
   }
-  h1::after {
-    content: "_";
-    color: #facc15;
-    animation: blink 1.2s infinite;
-  }
-  @keyframes blink {
-    50% { opacity: 0; }
-  }
 
   /* ======= Canvas de partículas ======= */
   #cyber-particles {
     pointer-events: none;
     opacity: 0.3;
+  }
+
+  /* ======= Stat Badges ======= */
+  .stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.05));
+    border: 1px solid rgba(234, 179, 8, 0.3);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fbbf24;
+    transition: all 0.3s ease;
+  }
+
+  .stat-badge:hover {
+    border-color: rgba(234, 179, 8, 0.6);
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(234, 179, 8, 0.1));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.2);
+  }
+
+  .stat-text {
+    font-family: 'Courier New', monospace;
   }
 </style>
 
