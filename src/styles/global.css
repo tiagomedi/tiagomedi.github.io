@@ -62,14 +62,16 @@
 	
 	/* Cursor para elementos clicables cuando pasas el mouse sobre ellos */
 	a, button, [role="button"], input[type="submit"], input[type="button"], 
-	select, [onclick], label[for], .card-flip, .skill-badge, .cert-badge, .project-badge, .post-badge, .tag-badge {
-		cursor: url('./img/2.png'), auto !important;
+	select, [onclick], label[for], .card-flip, .skill-badge, .cert-badge, .project-badge, .post-badge, .tag-badge,
+	.tech-nav-item, .tech-card, .layer, .cert-card, .value-card, .stat-card, .cert-item {
+		cursor: url('./img/2.png'), pointer !important;
 	}
 	
 	/* Cursor durante el clic activo */
 	html:active,
 	a:active, button:active, [role="button"]:active, .card-flip:active,
-	.skill-badge:active, .cert-badge:active, .project-badge:active, .post-badge:active, .tag-badge:active {
-		cursor: url('./img/2.png'), auto !important;
+	.skill-badge:active, .cert-badge:active, .project-badge:active, .post-badge:active, .tag-badge:active,
+	.tech-nav-item:active, .tech-card:active, .layer:active, .cert-card:active, .value-card:active, .stat-card:active, .cert-item:active {
+		cursor: url('./img/2.png'), pointer !important;
 	}
 }
