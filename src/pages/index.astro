@@ -29,7 +29,7 @@ const posts = (await getCollection('blog'))
           <!-- Contenido Principal -->
           <div class="space-y-6 order-2 md:order-1">
             <div class="space-y-2">
-              <p class="text-sm font-mono text-yellow-400 uppercase tracking-wider">Ciberseguridad & Infraestructura</p>
+              <p class="text-sm font-mono text-yellow-400 uppercase tracking-wider">Ciberseguridad & Developer</p>
               <h1 class="text-5xl md:text-6xl font-black leading-tight">
                 <span class="block text-white">Hola, soy</span>
                 <span class="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent animate-gradient">
@@ -85,15 +85,15 @@ const posts = (await getCollection('blog'))
 
           <!-- Imagen -->
           <div class="order-1 md:order-2 flex justify-center">
-            <div class="relative">
+            <div class="relative" >
               <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
-              <Image 
+              <a href="/about/"><Image
                 src={Ava} 
                 alt="Ignacio Santiago" 
                 width={400} 
                 loading="eager" 
                 class="relative rounded-3xl shadow-2xl border-2 border-yellow-500/30 hover:border-yellow-400/50 transition-all duration-500 hover:scale-105" 
-              />
+              /></a>
               <div class="absolute -bottom-4 -right-4 px-4 py-2 bg-yellow-400 text-black font-mono text-sm font-bold rounded-lg shadow-lg">
                 Open to Work!
               </div>
