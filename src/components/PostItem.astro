@@ -62,7 +62,7 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props
     padding: 0;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s ease;
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     animation: unlockPost 0.6s ease forwards;
@@ -78,11 +78,9 @@ const { post }: Record<string, any> | { post: BlogPost } = Astro.props
   }
 
   .post-badge:hover {
-    transform: translateY(-4px) scale(1.01);
     border-color: rgba(234, 179, 8, 0.6);
-    box-shadow: 
-      0 0 20px rgba(234, 179, 8, 0.3),
-      0 0 40px rgba(234, 179, 8, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
   }
 
   .post-image-full {

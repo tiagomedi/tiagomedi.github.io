@@ -54,8 +54,8 @@ import Ava from '@src/assets/img/ava.jpg';
 
       <!-- VALORES Y FILOSOFÍA -->
       <section class="mb-20 animate-fadeIn">
-        <div class="mb-12">
-          <h2 class="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-3">
+        <div class="mb-8">
+          <h2 class="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
             Mis Valores
           </h2>
           <p class="text-gray-400 font-mono text-sm">$ cat core_values.yaml</p>
@@ -88,147 +88,91 @@ import Ava from '@src/assets/img/ava.jpg';
         </div>
       </section>
 
-      <!-- SECCIÓN HABILIDADES - MODELO OSI -->
+      <!-- SECCIÓN HABILIDADES - TECH STACK -->
       <section class="mb-20 animate-fadeIn">
-        <div class="mb-12">
-          <h2 class="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-3">
+        <div class="mb-8">
+          <h2 class="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
             Tech Stack
           </h2>
-          <p class="text-gray-400 font-mono text-sm">$ cat ~/tech-stack/osi-model.yaml</p>
+          <p class="text-gray-400 font-mono text-sm">$ cat ~/tech-stack/skills.yaml</p>
         </div>
 
-        <div class="stack-container">
-          <!-- Modelo de Pila (Izquierda) -->
-          <div class="stack-layers">
-            
-            <div class="layer-stack">
-              <div class="layer layer-top" data-layer="security">
-                <div class="layer-content">
-                  <span class="layer-icon">🔍</span>
-                  <span class="layer-name">Seguridad Ofensiva</span>
-                </div>
-              </div>
-
-              <div class="layer layer-middle-1" data-layer="frameworks">
-                <div class="layer-content">
-                  <span class="layer-icon">🧭</span>
-                  <span class="layer-name">Frameworks</span>
-                </div>
-              </div>
-
-              <div class="layer layer-middle-2" data-layer="development">
-                <div class="layer-content">
-                  <span class="layer-icon">💻</span>
-                  <span class="layer-name">Development</span>
-                </div>
-              </div>
-
-              <div class="layer layer-bottom" data-layer="infrastructure">
-                <div class="layer-content">
-                  <span class="layer-icon">☁️</span>
-                  <span class="layer-name">Infrastructure</span>
-                </div>
-              </div>
-            </div>
+        <!-- Tech Stack Navbar -->
+        <div class="tech-stack-wrapper">
+          <!-- Navbar horizontal -->
+          <div class="tech-navbar">
+            <button class="tech-nav-item active" data-category="security">
+              <span class="tech-nav-icon">🔍</span>
+              <span class="tech-nav-label">Seguridad Ofensiva</span>
+            </button>
+            <button class="tech-nav-item" data-category="frameworks">
+              <span class="tech-nav-icon">🧭</span>
+              <span class="tech-nav-label">Frameworks</span>
+            </button>
+            <button class="tech-nav-item" data-category="development">
+              <span class="tech-nav-icon">💻</span>
+              <span class="tech-nav-label">Development</span>
+            </button>
+            <button class="tech-nav-item" data-category="infrastructure">
+              <span class="tech-nav-icon">☁️</span>
+              <span class="tech-nav-label">Infrastructure</span>
+            </button>
           </div>
 
-          <!-- Panel de Información (Derecha) -->
-          <div class="stack-info-panel">
-            <div class="info-placeholder">
-              <div class="placeholder-icon">👈</div>
-              <p class="placeholder-text">Haz click en una capa para ver sus detalles</p>
+          <!-- Content Area -->
+          <div class="tech-content-area">
+            <!-- Security Content -->
+            <div class="tech-content active" data-category="security">
+              <div class="tech-grid">
+                <div class="tech-card">Nmap</div>
+                <div class="tech-card">Burp Suite</div>
+                <div class="tech-card">Wireshark</div>
+                <div class="tech-card">Metasploit</div>
+                <div class="tech-card">John the Ripper</div>
+                <div class="tech-card">Hydra</div>
+                <div class="tech-card">Sqlmap</div>
+                <div class="tech-card">Aircrack-ng</div>
+              </div>
             </div>
 
-            <!-- Security Info -->
-            <div class="layer-info" data-layer="security">
-              <ul class="info-list">
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Nmap - Network exploration & security auditing</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Burp Suite - Web vulnerability scanner</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Wireshark - Network protocol analyzer</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Metasploit - Penetration testing framework</span>
-                </li>
-              </ul>
+            <!-- Frameworks Content -->
+            <div class="tech-content" data-category="frameworks">
+              <div class="tech-grid">
+                <div class="tech-card">OWASP Top 10</div>
+                <div class="tech-card">ISO 27001</div>
+                <div class="tech-card">NIST</div>
+                <div class="tech-card">MITRE ATT&CK</div>
+                <div class="tech-card">CIS Controls</div>
+                <div class="tech-card">COBIT</div>
+              </div>
             </div>
 
-            <!-- Frameworks Info -->
-            <div class="layer-info" data-layer="frameworks">
-              <ul class="info-list">
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">OWASP Top 10 - Web application security risks</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">ISO 27001 - Information security standards</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">NIST Framework - Cybersecurity risk management</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">MITRE ATT&CK - Adversary tactics & techniques</span>
-                </li>
-              </ul>
+            <!-- Development Content -->
+            <div class="tech-content" data-category="development">
+              <div class="tech-grid">
+                <div class="tech-card">Python</div>
+                <div class="tech-card">Bash</div>
+                <div class="tech-card">C++</div>
+                <div class="tech-card">Java</div>
+                <div class="tech-card">JavaScript</div>
+                <div class="tech-card">TypeScript</div>
+                <div class="tech-card">Go</div>
+                <div class="tech-card">PowerShell</div>
+              </div>
             </div>
 
-            <!-- Development Info -->
-            <div class="layer-info" data-layer="development">
-              <ul class="info-list">
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Python - Scripting & automation</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Bash - Shell scripting & system automation</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">C++ - System-level programming</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Java - Enterprise applications</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">JavaScript - Web development & automation</span>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Infrastructure Info -->
-            <div class="layer-info" data-layer="infrastructure">
-              <ul class="info-list">
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Docker - Containerization & orchestration</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Linux - System administration & hardening</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">SQL/NoSQL - Database management & security</span>
-                </li>
-                <li class="info-item">
-                  <span class="bullet">▸</span>
-                  <span class="item-text">Git - Version control & collaboration</span>
-                </li>
-              </ul>
+            <!-- Infrastructure Content -->
+            <div class="tech-content" data-category="infrastructure">
+              <div class="tech-grid">
+                <div class="tech-card">Docker</div>
+                <div class="tech-card">Kubernetes</div>
+                <div class="tech-card">Linux</div>
+                <div class="tech-card">Windows Server</div>
+                <div class="tech-card">Git</div>
+                <div class="tech-card">PostgreSQL</div>
+                <div class="tech-card">MongoDB</div>
+                <div class="tech-card">AWS</div>
+              </div>
             </div>
           </div>
         </div>
@@ -236,104 +180,116 @@ import Ava from '@src/assets/img/ava.jpg';
 
       <!-- SECCIÓN CERTIFICACIONES -->
       <section class="mb-20 animate-fadeIn">
-        <div class="mb-12">
-          <h2 class="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-3">
+        <div class="mb-8">
+          <h2 class="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent mb-2">
             Licencias y Certificaciones
           </h2>
           <p class="text-gray-400 font-mono text-sm">$ cat achievements.log</p>
         </div>
 
-        <!-- Categoría: Ciberseguridad -->
-        <div class="mb-12">
-          <h3 class="text-2xl font-semibold text-yellow-400 mb-6 flex items-center gap-3">
-            <span class="text-3xl">🛡️</span> Ciberseguridad
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🔐</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Introduction to Cybersecurity</h4>
-                <p class="cert-org">Cisco Networking Academy</p>
-                <span class="cert-year">2025</span>
+        <div class="stack-container">
+          <!-- Categorías (Izquierda) -->
+          <div class="stack-layers">
+            <div class="layer-stack">
+              <div class="layer layer-top" data-layer="cybersecurity">
+                <div class="layer-content">
+                  <span class="layer-icon">🛡️</span>
+                  <span class="layer-name">Ciberseguridad</span>
+                </div>
               </div>
-            </div>
 
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🐧</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Introduction to Linux</h4>
-                <p class="cert-org">Hack4u Academy</p>
-                <span class="cert-year">2025</span>
+              <div class="layer layer-middle-1" data-layer="cloud">
+                <div class="layer-content">
+                  <span class="layer-icon">☁️</span>
+                  <span class="layer-name">Cloud & Networking</span>
+                </div>
               </div>
-            </div>
 
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🥷🏻</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Introduction to Hacking</h4>
-                <p class="cert-org">Hack4u Academy</p>
-                <span class="cert-year">2025</span>
+              <div class="layer layer-bottom" data-layer="development">
+                <div class="layer-content">
+                  <span class="layer-icon">🤖</span>
+                  <span class="layer-name">IA & Development</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Categoría: Networking & Cloud -->
-        <div class="mb-12">
-          <h3 class="text-2xl font-semibold text-yellow-400 mb-6 flex items-center gap-3">
-            <span class="text-3xl">☁️</span> Cloud & Networking
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🌐</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Essential Google Cloud Infrastructure</h4>
-                <p class="cert-org">Google Cloud Skills Boost</p>
-                <span class="cert-year">2025</span>
+          <!-- Panel de Certificaciones (Derecha) -->
+          <div class="stack-info-panel">
+            <div class="info-placeholder">
+              <div class="placeholder-icon">👈</div>
+              <p class="placeholder-text">Haz click en una categoría para ver las certificaciones</p>
+            </div>
+
+            <!-- Ciberseguridad -->
+            <div class="layer-info" data-layer="cybersecurity">
+              <!-- <div class="info-header">
+                <span class="info-title">🛡️ Ciberseguridad</span>
+              </div> -->
+              <div class="cert-grid">
+                <div class="cert-card">
+                  <!-- <div class="cert-card-icon">🔐</div> -->
+                  <div class="cert-card-title">Introduction to Cybersecurity</div>
+                  <div class="cert-card-org">Cisco Networking Academy</div>
+                  <div class="cert-card-year">2025</div>
+                </div>
+                <div class="cert-card">
+                  <!-- <div class="cert-card-icon">🐧</div> -->
+                  <div class="cert-card-title">Introduction to Linux</div>
+                  <div class="cert-card-org">Hack4u Academy</div>
+                  <div class="cert-card-year">2025</div>
+                </div>
+                <div class="cert-card">
+                  <!-- <div class="cert-card-icon">🥷🏻</div> -->
+                  <div class="cert-card-title">Introduction to Hacking</div>
+                  <div class="cert-card-org">Hack4u Academy</div>
+                  <div class="cert-card-year">2025</div>
+                </div>
               </div>
             </div>
 
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">☁️</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Google Cloud Fundamentals</h4>
-                <p class="cert-org">Google Cloud Skills Boost</p>
-                <span class="cert-year">2025</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Categoría: IA & Desarrollo -->
-        <div>
-          <h3 class="text-2xl font-semibold text-yellow-400 mb-6 flex items-center gap-3">
-            <span class="text-3xl">🤖</span> IA & Development
-          </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🐍</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Python Essentials</h4>
-                <p class="cert-org">Cisco Networking Academy</p>
-                <span class="cert-year">2025</span>
+            <!-- Cloud & Networking -->
+            <div class="layer-info" data-layer="cloud">
+              <!-- <div class="info-header">
+                <span class="info-title">☁️ Cloud & Networking</span>
+              </div> -->
+              <div class="cert-grid">
+                <div class="cert-card">
+                  <!-- <div class="cert-card-icon">🌐</div> -->
+                  <div class="cert-card-title">Essential Google Cloud Infrastructure</div>
+                  <div class="cert-card-org">Google Cloud Skills Boost</div>
+                  <div class="cert-card-year">2025</div>
+                </div>
+                <div class="cert-card">
+                    <!-- <div class="cert-card-icon">☁️</div> -->
+                  <div class="cert-card-title">Google Cloud Fundamentals</div>
+                  <div class="cert-card-org">Google Cloud Skills Boost</div>
+                  <div class="cert-card-year">2025</div>
+                </div>
               </div>
             </div>
 
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🤖</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Fundamentals of IA Generativa</h4>
-                <p class="cert-org">Microsoft & LinkedIn</p>
-                <span class="cert-year">2024</span>
-              </div>
-            </div>
-
-            <div class="cert-badge" data-unlocked="true">
-              <div class="cert-icon">🐳</div>
-              <div class="cert-content">
-                <h4 class="cert-title">Docker Ultimate</h4>
-                <p class="cert-org">Udemy</p>
-                <span class="cert-year">2024</span>
+            <!-- IA & Development -->
+            <div class="layer-info" data-layer="development">
+              <!-- <div class="info-header">
+                <span class="info-title">🤖 IA & Development</span>
+              </div> -->
+              <div class="cert-grid">
+                <div class="cert-card">
+                  <div class="cert-card-title">Python Essentials</div>
+                  <div class="cert-card-org">Cisco Networking Academy</div>
+                  <div class="cert-card-year">2025</div>
+                </div>
+                <div class="cert-card">
+                  <div class="cert-card-title">Fundamentals of IA Generativa</div>
+                  <div class="cert-card-org">Microsoft & LinkedIn</div>
+                  <div class="cert-card-year">2024</div>
+                </div>
+                <div class="cert-card">
+                  <div class="cert-card-title">Docker Ultimate</div>
+                  <div class="cert-card-org">Udemy</div>
+                  <div class="cert-card-year">2024</div>
+                </div>
               </div>
             </div>
           </div>
@@ -466,8 +422,8 @@ import Ava from '@src/assets/img/ava.jpg';
   .value-card {
     background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
     border: 2px solid rgba(234, 179, 8, 0.3);
-    border-radius: 1.25rem;
-    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
     text-align: center;
     transition: all 0.4s ease;
     height: 100%;
@@ -480,8 +436,8 @@ import Ava from '@src/assets/img/ava.jpg';
   }
 
   .value-icon {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
     filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));
     transition: all 0.3s ease;
   }
@@ -492,16 +448,16 @@ import Ava from '@src/assets/img/ava.jpg';
   }
 
   .value-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #fbbf24;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .value-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #d1d5db;
-    line-height: 1.7;
+    line-height: 1.6;
   }
 
   /* ======= Stack Model ======= */
@@ -690,7 +646,7 @@ import Ava from '@src/assets/img/ava.jpg';
   /* Panel de Información (Derecha) */
   .stack-info-panel {
     position: relative;
-    height: 100%;
+    min-height: 400px;
     background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
     border: 2px solid rgba(234, 179, 8, 0.4);
     border-radius: 0.75rem;
@@ -753,7 +709,28 @@ import Ava from '@src/assets/img/ava.jpg';
     bottom: 0;
     padding: 2rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .layer-info::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .layer-info::-webkit-scrollbar-track {
+    background: rgba(234, 179, 8, 0.1);
+    border-radius: 3px;
+  }
+
+  .layer-info::-webkit-scrollbar-thumb {
+    background: rgba(234, 179, 8, 0.4);
+    border-radius: 3px;
+  }
+
+  .layer-info::-webkit-scrollbar-thumb:hover {
+    background: rgba(234, 179, 8, 0.6);
   }
 
   .layer-info.active {
@@ -763,91 +740,394 @@ import Ava from '@src/assets/img/ava.jpg';
   }
 
   .info-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid rgba(234, 179, 8, 0.3);
   }
 
-  .info-icon {
-    font-size: 2.5rem;
-    filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));
-  }
-
   .info-title {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 800;
     background: linear-gradient(135deg, #facc15, #eab308);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    display: inline-block;
   }
 
-  .info-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
+  /* Tech Grid */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.75rem;
     width: 100%;
-    max-height: 100%;
+    max-height: 280px;
     overflow-y: auto;
+    padding-right: 0.5rem;
   }
 
-  .info-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, rgba(234, 179, 8, 0.12), rgba(234, 179, 8, 0.06));
-    border-left: 3px solid rgba(234, 179, 8, 0.6);
-    border-radius: 0.6rem;
+  .tech-grid::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .tech-grid::-webkit-scrollbar-track {
+    background: rgba(234, 179, 8, 0.1);
+    border-radius: 3px;
+  }
+
+  .tech-grid::-webkit-scrollbar-thumb {
+    background: rgba(234, 179, 8, 0.4);
+    border-radius: 3px;
+  }
+
+  .tech-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(234, 179, 8, 0.6);
+  }
+
+  .tech-card {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.15), rgba(234, 179, 8, 0.08));
+    border: 1px solid rgba(234, 179, 8, 0.4);
+    border-radius: 0.5rem;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fbbf24;
     transition: all 0.3s ease;
-    animation: slideIn 0.4s ease forwards;
+    cursor: default;
+    animation: fadeInCard 0.4s ease forwards;
     opacity: 0;
+    position: relative;
+    overflow: hidden;
   }
 
-  .info-item:nth-child(1) { animation-delay: 0.1s; }
-  .info-item:nth-child(2) { animation-delay: 0.2s; }
-  .info-item:nth-child(3) { animation-delay: 0.3s; }
-  .info-item:nth-child(4) { animation-delay: 0.4s; }
-  .info-item:nth-child(5) { animation-delay: 0.5s; }
+  .tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(234, 179, 8, 0.2), transparent);
+    transition: left 0.5s ease;
+  }
 
-  @keyframes slideIn {
+  .tech-card:hover::before {
+    left: 100%;
+  }
+
+  .tech-card:hover {
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.3), rgba(234, 179, 8, 0.15));
+    border-color: rgba(234, 179, 8, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+    color: #facc15;
+  }
+
+  .tech-card:nth-child(1) { animation-delay: 0.05s; }
+  .tech-card:nth-child(2) { animation-delay: 0.1s; }
+  .tech-card:nth-child(3) { animation-delay: 0.15s; }
+  .tech-card:nth-child(4) { animation-delay: 0.2s; }
+  .tech-card:nth-child(5) { animation-delay: 0.25s; }
+  .tech-card:nth-child(6) { animation-delay: 0.3s; }
+  .tech-card:nth-child(7) { animation-delay: 0.35s; }
+  .tech-card:nth-child(8) { animation-delay: 0.4s; }
+
+  @keyframes fadeInCard {
     from {
       opacity: 0;
-      transform: translateX(-20px);
+      transform: scale(0.9);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: scale(1);
     }
   }
 
-  .info-item:hover {
-    background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(234, 179, 8, 0.15));
-    border-left-color: rgba(234, 179, 8, 1);
-    transform: translateX(10px);
+  /* ======= Certification Grid ======= */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-height: none;
+    padding-right: 0.5rem;
+  }
+
+  .cert-grid::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .cert-grid::-webkit-scrollbar-track {
+    background: rgba(234, 179, 8, 0.1);
+    border-radius: 3px;
+  }
+
+  .cert-grid::-webkit-scrollbar-thumb {
+    background: rgba(234, 179, 8, 0.4);
+    border-radius: 3px;
+  }
+
+  .cert-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(234, 179, 8, 0.6);
+  }
+
+  .cert-card {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
+    border: 2px solid rgba(234, 179, 8, 0.4);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    animation: fadeInCard 0.4s ease forwards;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(234, 179, 8, 0.15), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .cert-card:hover::before {
+    left: 100%;
+  }
+
+  .cert-card:hover {
+    border-color: rgba(234, 179, 8, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(234, 179, 8, 0.3);
+  }
+
+  .cert-card-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .cert-card:hover .cert-card-icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, 0.8));
+  }
+
+  .cert-card-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fbbf24;
+    line-height: 1.3;
+    min-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cert-card-org {
+    font-size: 0.75rem;
+    color: #d1d5db;
+    line-height: 1.2;
+  }
+
+  .cert-card-year {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    font-weight: 600;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(234, 179, 8, 0.2);
+  }
+
+  .cert-card:nth-child(1) { animation-delay: 0.1s; }
+  .cert-card:nth-child(2) { animation-delay: 0.2s; }
+  .cert-card:nth-child(3) { animation-delay: 0.3s; }
+  .cert-card:nth-child(4) { animation-delay: 0.4s; }
+  .cert-card:nth-child(5) { animation-delay: 0.5s; }
+  .cert-card:nth-child(6) { animation-delay: 0.6s; }
+
+  /* ======= Tech Stack Navbar ======= */
+  .tech-stack-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .tech-navbar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0.6rem;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
+    border: 2px solid rgba(234, 179, 8, 0.3);
+    border-radius: 0.75rem;
+    overflow-x: auto;
+  }
+
+  .tech-navbar::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .tech-navbar::-webkit-scrollbar-track {
+    background: rgba(234, 179, 8, 0.1);
+    border-radius: 3px;
+  }
+
+  .tech-navbar::-webkit-scrollbar-thumb {
+    background: rgba(234, 179, 8, 0.4);
+    border-radius: 3px;
+  }
+
+  .tech-nav-item {
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 0.85rem;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.1), rgba(234, 179, 8, 0.05));
+    border: 2px solid rgba(234, 179, 8, 0.3);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #facc15, #eab308);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .tech-nav-item:hover::before,
+  .tech-nav-item.active::before {
+    transform: scaleX(1);
+  }
+
+  .tech-nav-item:hover {
+    border-color: rgba(234, 179, 8, 0.6);
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(234, 179, 8, 0.1));
+    transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
   }
 
-  .bullet {
-    color: #fbbf24;
-    font-size: 1.2rem;
-    font-weight: 700;
-    min-width: 20px;
-    line-height: 1;
+  .tech-nav-item.active {
+    border-color: rgba(234, 179, 8, 1);
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(234, 179, 8, 0.15));
+    box-shadow: 
+      0 6px 16px rgba(234, 179, 8, 0.4),
+      inset 0 0 20px rgba(234, 179, 8, 0.1);
   }
 
-  .item-text {
-    flex: 1;
-    color: #e5e7eb;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-weight: 500;
+  .tech-nav-icon {
+    font-size: 1.75rem;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.5));
+    transition: all 0.3s ease;
+  }
+
+  .tech-nav-item:hover .tech-nav-icon,
+  .tech-nav-item.active .tech-nav-icon {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, 0.8));
+  }
+
+  .tech-nav-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fbbf24;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .tech-nav-item:hover .tech-nav-label,
+  .tech-nav-item.active .tech-nav-label {
+    color: #facc15;
+    text-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+  }
+
+  .tech-content-area {
+    position: relative;
+    min-height: auto;
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
+    border: 2px solid rgba(234, 179, 8, 0.4);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    overflow: hidden;
+    box-shadow: 
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 0 40px rgba(234, 179, 8, 0.05);
+  }
+
+  .tech-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .tech-content.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    position: relative;
+  }
+
+  /* Responsive Tech Stack */
+  @media (max-width: 768px) {
+    .tech-navbar {
+      gap: 0.75rem;
+      padding: 0.5rem;
+    }
+
+    .tech-nav-item {
+      min-width: 140px;
+      padding: 1rem 0.75rem;
+    }
+
+    .tech-nav-icon {
+      font-size: 1.5rem;
+    }
+
+    .tech-nav-label {
+      font-size: 0.75rem;
+    }
+
+    .tech-content-area {
+      padding: 1.5rem;
+      min-height: 320px;
+    }
+
+    .tech-content {
+      top: 1.5rem;
+      left: 1.5rem;
+      right: 1.5rem;
+      bottom: 1.5rem;
+    }
   }
 
   /* Responsive */
@@ -897,62 +1177,130 @@ import Ava from '@src/assets/img/ava.jpg';
       min-height: 320px;
     }
 
-    .info-item {
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .tech-card {
+      padding: 0.6rem 0.4rem;
+      font-size: 0.8rem;
+    }
+
+    .cert-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .cert-card {
       padding: 0.85rem;
     }
 
-    .item-text {
-      font-size: 0.9rem;
+    .cert-card-title {
+      font-size: 0.8rem;
+      min-height: 2.4rem;
+    }
+
+    .info-title {
+      font-size: 1.2rem;
     }
   }
 
-  /* ======= Certification Badges ======= */
-  .cert-badge {
-    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.6));
+  /* ======= Certification Section ======= */
+  .cert-category-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(234, 179, 8, 0.3);
+  }
+
+  .cert-category-icon {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.5));
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+
+  .cert-item {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.7));
     border: 2px solid rgba(234, 179, 8, 0.3);
     border-radius: 1rem;
-    padding: 1.5rem 1.25rem;
-    text-align: center;
-    transition: all 0.4s ease;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cert-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
     height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(234, 179, 8, 0.15), transparent);
+    transition: left 0.6s ease;
   }
 
-  .cert-badge:hover {
+  .cert-item:hover::before {
+    left: 100%;
+  }
+
+  .cert-item:hover {
     border-color: rgba(234, 179, 8, 0.6);
-    transform: translateY(-8px);
-    box-shadow: 0 0 40px rgba(234, 179, 8, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(234, 179, 8, 0.3);
   }
 
-  .cert-icon {
+  .cert-item-icon {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 12px rgba(234, 179, 8, 0.5));
     transition: all 0.3s ease;
   }
 
-  .cert-badge:hover .cert-icon {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 25px rgba(234, 179, 8, 0.8));
+  .cert-item:hover .cert-item-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 20px rgba(234, 179, 8, 0.8));
   }
 
-  .cert-title {
-    font-size: 0.95rem;
+  .cert-item-name {
+    font-size: 1rem;
     font-weight: 700;
     color: #fbbf24;
-    margin-bottom: 0.5rem;
+    text-align: center;
     line-height: 1.3;
+    margin-bottom: 0.25rem;
   }
 
-  .cert-org {
+  .cert-item-org {
     font-size: 0.85rem;
     color: #fde68a;
-    margin-bottom: 0.35rem;
+    text-align: center;
+    font-weight: 500;
   }
 
-  .cert-year {
-    font-size: 0.8rem;
+  .cert-item-year {
+    font-size: 0.75rem;
     color: #9ca3af;
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(234, 179, 8, 0.1);
+    border-radius: 1rem;
   }
 </style>
 
@@ -961,45 +1309,83 @@ import Ava from '@src/assets/img/ava.jpg';
   
   initCyberParticles();
 
-  // ======= Stack Layer Interaction =======
+  // ======= Tech Stack Navbar Interaction =======
   document.addEventListener('DOMContentLoaded', () => {
-    const layers = document.querySelectorAll('.layer') as NodeListOf<HTMLElement>;
-    const layerInfos = document.querySelectorAll('.layer-info') as NodeListOf<HTMLElement>;
-    const placeholder = document.querySelector('.info-placeholder') as HTMLElement;
-    let activeLayer: string | null = null;
+    const navItems = document.querySelectorAll('.tech-nav-item') as NodeListOf<HTMLElement>;
+    const techContents = document.querySelectorAll('.tech-content') as NodeListOf<HTMLElement>;
 
-    layers.forEach(layer => {
-      layer.addEventListener('click', () => {
-        const layerName = layer.dataset.layer;
-        if (!layerName) return;
+    navItems.forEach(navItem => {
+      navItem.addEventListener('click', () => {
+        const category = navItem.dataset.category;
+        if (!category) return;
 
-        // Si ya está activa, la desactivamos
-        if (activeLayer === layerName) {
-          layer.classList.remove('active');
-          layerInfos.forEach(info => info.classList.remove('active'));
-          placeholder.classList.remove('hidden');
-          activeLayer = null;
-          return;
-        }
+        // Remover active de todos los items
+        navItems.forEach(item => item.classList.remove('active'));
+        techContents.forEach(content => content.classList.remove('active'));
 
-        // Desactivar todas las capas
-        layers.forEach(l => l.classList.remove('active'));
-        layerInfos.forEach(info => info.classList.remove('active'));
+        // Activar el item seleccionado
+        navItem.classList.add('active');
 
-        // Activar la capa seleccionada
-        layer.classList.add('active');
-        activeLayer = layerName;
-
-        // Ocultar placeholder y mostrar info correspondiente
-        placeholder.classList.add('hidden');
-        const targetInfo = document.querySelector(`.layer-info[data-layer="${layerName}"]`) as HTMLElement;
-        if (targetInfo) {
-          setTimeout(() => {
-            targetInfo.classList.add('active');
-          }, 150);
+        // Mostrar el contenido correspondiente
+        const targetContent = document.querySelector(`.tech-content[data-category="${category}"]`) as HTMLElement;
+        if (targetContent) {
+          targetContent.classList.add('active');
         }
       });
     });
+  });
+
+  // ======= Stack Layer Interaction =======
+  document.addEventListener('DOMContentLoaded', () => {
+    // Función para inicializar interacción de capas en cualquier sección
+    const initStackInteraction = (containerSelector: string) => {
+      const containers = document.querySelectorAll(containerSelector) as NodeListOf<HTMLElement>;
+      
+      containers.forEach(container => {
+        const layers = container.querySelectorAll('.layer') as NodeListOf<HTMLElement>;
+        const layerInfos = container.querySelectorAll('.layer-info') as NodeListOf<HTMLElement>;
+        const placeholder = container.querySelector('.info-placeholder') as HTMLElement;
+        let activeLayer: string | null = null;
+
+        layers.forEach(layer => {
+          layer.addEventListener('click', () => {
+            const layerName = layer.dataset.layer;
+            if (!layerName) return;
+
+            // Si ya está activa, la desactivamos
+            if (activeLayer === layerName) {
+              layer.classList.remove('active');
+              layerInfos.forEach(info => info.classList.remove('active'));
+              placeholder?.classList.remove('hidden');
+              activeLayer = null;
+              return;
+            }
+
+            // Desactivar todas las capas
+            layers.forEach(l => l.classList.remove('active'));
+            layerInfos.forEach(info => info.classList.remove('active'));
+
+            // Activar la capa seleccionada
+            layer.classList.add('active');
+            activeLayer = layerName;
+
+            // Ocultar placeholder y mostrar info correspondiente
+            if (placeholder) {
+              placeholder.classList.add('hidden');
+            }
+            const targetInfo = container.querySelector(`.layer-info[data-layer="${layerName}"]`) as HTMLElement;
+            if (targetInfo) {
+              setTimeout(() => {
+                targetInfo.classList.add('active');
+              }, 150);
+            }
+          });
+        });
+      });
+    };
+
+    // Inicializar para todas las secciones con stack-container
+    initStackInteraction('.stack-container');
   });
 
   // ======= Funcionalidad del Modal de CV =======
