@@ -1094,20 +1094,23 @@ import Ava from '@src/assets/img/ava.jpg';
     position: relative;
   }
 
-  /* Responsive Tech Stack */
-  @media (max-width: 768px) {
+  /* ======= Responsive Design ======= */
+  
+  /* Tablets y pantallas medianas (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    /* Tech Stack Responsive */
     .tech-navbar {
-      gap: 0.75rem;
+      gap: 0.65rem;
       padding: 0.5rem;
     }
 
     .tech-nav-item {
       min-width: 140px;
-      padding: 1rem 0.75rem;
+      padding: 0.9rem 0.7rem;
     }
 
     .tech-nav-icon {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     .tech-nav-label {
@@ -1115,28 +1118,50 @@ import Ava from '@src/assets/img/ava.jpg';
     }
 
     .tech-content-area {
-      padding: 1.5rem;
-      min-height: 320px;
+      padding: 1.75rem;
     }
 
-    .tech-content {
-      top: 1.5rem;
-      left: 1.5rem;
-      right: 1.5rem;
-      bottom: 1.5rem;
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 0.7rem;
     }
-  }
 
-  /* Responsive */
-  @media (max-width: 1024px) {
+    .tech-card {
+      padding: 0.7rem 0.5rem;
+      font-size: 0.82rem;
+    }
+
+    /* Certificaciones Responsive */
     .stack-container {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
 
     .stack-layers {
-      max-width: 320px;
+      max-width: 100%;
       margin: 0 auto;
+    }
+
+    .layer-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .layer {
+      border-radius: 0.75rem;
+      margin-top: 0;
+    }
+
+    .layer-top,
+    .layer-middle-1,
+    .layer-bottom {
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .stack-info-panel {
+      min-height: 350px;
     }
 
     .layer-info {
@@ -1145,9 +1170,88 @@ import Ava from '@src/assets/img/ava.jpg';
       left: 0;
       right: 0;
     }
+
+    .cert-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 0.9rem;
+    }
   }
 
+  /* Móviles y pantallas pequeñas (max-width: 768px) */
   @media (max-width: 768px) {
+    /* Hero Section */
+    .container {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem !important;
+    }
+
+    /* Values Section */
+    .value-card {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .value-icon {
+      font-size: 2.5rem;
+    }
+
+    .value-title {
+      font-size: 1.1rem;
+    }
+
+    .value-description {
+      font-size: 0.9rem;
+    }
+
+    /* Tech Stack Responsive */
+    .tech-navbar {
+      gap: 0.5rem;
+      padding: 0.4rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+
+    .tech-nav-item {
+      min-width: 110px;
+      flex-shrink: 0;
+      padding: 0.8rem 0.6rem;
+      gap: 0.35rem;
+    }
+
+    .tech-nav-icon {
+      font-size: 1.4rem;
+    }
+
+    .tech-nav-label {
+      font-size: 0.7rem;
+      line-height: 1.2;
+    }
+
+    .tech-content-area {
+      padding: 1.25rem;
+      min-height: 300px;
+    }
+
+    .tech-content {
+      padding: 1.25rem;
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 0.6rem;
+      max-height: 250px;
+    }
+
+    .tech-card {
+      padding: 0.6rem 0.4rem;
+      font-size: 0.75rem;
+    }
+
+    /* Certificaciones Responsive */
     .stack-container {
       gap: 1.5rem;
     }
@@ -1156,13 +1260,18 @@ import Ava from '@src/assets/img/ava.jpg';
       max-width: 100%;
     }
 
+    .layer-stack {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
     .layer {
       padding: 1rem 0.85rem;
-      min-height: 65px;
+      min-height: 70px;
     }
 
     .layer-icon {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     .layer-name {
@@ -1170,23 +1279,111 @@ import Ava from '@src/assets/img/ava.jpg';
     }
 
     .stack-info-panel {
-      padding: 1.5rem;
-      min-height: 320px;
+      padding: 1.25rem;
+      min-height: 300px;
     }
 
-    .tech-grid {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      gap: 0.6rem;
+    .placeholder-icon {
+      font-size: 3rem;
     }
 
-    .tech-card {
-      padding: 0.6rem 0.4rem;
-      font-size: 0.8rem;
+    .placeholder-text {
+      font-size: 0.95rem;
     }
 
     .cert-grid {
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      gap: 0.75rem;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 0.7rem;
+      max-height: none;
+    }
+
+    .cert-card {
+      padding: 0.9rem;
+    }
+
+    .cert-card-title {
+      font-size: 0.78rem;
+      min-height: 2.2rem;
+    }
+
+    .cert-card-org {
+      font-size: 0.7rem;
+    }
+
+    .cert-card-year {
+      font-size: 0.68rem;
+    }
+
+    .info-title {
+      font-size: 1.15rem;
+    }
+
+    .layer.active::after {
+      font-size: 1rem;
+      right: 0.75rem;
+    }
+  }
+
+  /* Móviles muy pequeños (max-width: 480px) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem !important;
+    }
+
+    /* Tech Stack */
+    .tech-nav-item {
+      min-width: 100px;
+      padding: 0.7rem 0.5rem;
+    }
+
+    .tech-nav-icon {
+      font-size: 1.3rem;
+    }
+
+    .tech-nav-label {
+      font-size: 0.65rem;
+    }
+
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .tech-card {
+      padding: 0.5rem 0.35rem;
+      font-size: 0.7rem;
+    }
+
+    .tech-content-area {
+      padding: 1rem;
+    }
+
+    /* Certificaciones */
+    .stack-container {
+      gap: 1.25rem;
+    }
+
+    .layer {
+      padding: 0.9rem 0.75rem;
+      min-height: 65px;
+    }
+
+    .layer-icon {
+      font-size: 1.4rem;
+    }
+
+    .layer-name {
+      font-size: 0.8rem;
+    }
+
+    .stack-info-panel {
+      padding: 1rem;
+      min-height: 280px;
+    }
+
+    .cert-grid {
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
     }
 
     .cert-card {
@@ -1194,12 +1391,20 @@ import Ava from '@src/assets/img/ava.jpg';
     }
 
     .cert-card-title {
-      font-size: 0.8rem;
-      min-height: 2.4rem;
+      font-size: 0.75rem;
+      min-height: auto;
     }
 
-    .info-title {
-      font-size: 1.2rem;
+    .cert-card-org {
+      font-size: 0.68rem;
+    }
+
+    .placeholder-icon {
+      font-size: 2.5rem;
+    }
+
+    .placeholder-text {
+      font-size: 0.88rem;
     }
   }
 
