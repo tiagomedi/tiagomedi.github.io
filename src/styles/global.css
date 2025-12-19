@@ -63,7 +63,8 @@
 	/* Cursor para elementos clicables cuando pasas el mouse sobre ellos */
 	a, button, [role="button"], input[type="submit"], input[type="button"], 
 	select, [onclick], label[for], .card-flip, .skill-badge, .cert-badge, .project-badge, .post-badge, .tag-badge,
-	.tech-nav-item, .tech-card, .layer, .cert-card, .value-card, .stat-card, .cert-item {
+	.tech-nav-item, .tech-card, .layer, .cert-card, .value-card, .stat-card, .cert-item,
+	.project-card, .project-image-container, .project-title, .project-link-icon {
 		cursor: url('./img/2.png'), pointer !important;
 	}
 	
@@ -71,7 +72,8 @@
 	html:active,
 	a:active, button:active, [role="button"]:active, .card-flip:active,
 	.skill-badge:active, .cert-badge:active, .project-badge:active, .post-badge:active, .tag-badge:active,
-	.tech-nav-item:active, .tech-card:active, .layer:active, .cert-card:active, .value-card:active, .stat-card:active, .cert-item:active {
+	.tech-nav-item:active, .tech-card:active, .layer:active, .cert-card:active, .value-card:active, .stat-card:active, .cert-item:active,
+	.project-card:active, .project-image-container:active, .project-title:active, .project-link-icon:active {
 		cursor: url('./img/2.png'), pointer !important;
 	}
 }
