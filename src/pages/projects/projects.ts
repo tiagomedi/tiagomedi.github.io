@@ -29,6 +29,7 @@ export const getProjects = async (): Promise<Project[]> => {
       tags: ['OpenStreetMap', 'Python', 'PostGIS', 'Docker'],
       image: 'georuta.png',
       demoLink: ""
+      
     },
     {
       name: 'Muscle RPG | Maximiza tu Hipertrofia',
@@ -83,8 +84,8 @@ export const projects: Project[] = [
     demoLink: ""
   },
   {
-    name: 'Muscle RPG',
-    description: 'Desarrollo e implementación del sitio web corporativo +Arq Consultores.',
+    name: 'Muscle RPG | Maximiza tu Hipertrofia',
+    description: 'Modelo planificación inteligente de rutinas de ejercicio maximizando hipertrofia muscular con enfoque matematico basado en programación dinamica.',
     postLink: 'https://github.com/tiagomedi/Muscle-RPG',
     tags: ['NestJS', 'Angular', 'MongoDB', 'Algorithms'],
     image: 'musclerpg.png',

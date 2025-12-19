@@ -14,7 +14,7 @@ const projectImages = import.meta.glob('@src/assets/img/projects/*.{png,jpg,jpeg
 <div class="grid grid-cols-12 gap-5">
   {
     projects.map((project: Project, index: number) => {
-      const imagePath = project.image ? `/src/assets/img/projects/${project.image}` : null;
+      const imagePath = project.image ? `/projects/${project.image}` : null;
       
       return (
         <div class="col-span-12 sm:col-span-6 lg:col-span-4 project-card">
