@@ -12,7 +12,7 @@ import PostItem from '../components/PostItem.astro';
 
 type BlogPost = CollectionEntry<'blog'>;
 
-const top6Projects = projects.slice(0, 4);
+const top6Projects = projects.slice(0, 6);
 const posts = (await getCollection('blog'))
   .sort((a: BlogPost, b: BlogPost) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 4);
