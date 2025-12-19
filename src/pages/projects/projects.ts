@@ -58,7 +58,7 @@ export const getProjects = async (): Promise<Project[]> => {
       name: 'Automatización de QA con LLMs: Generación de Casos de Prueba desde Videos de Interfaz',
       description: 'Generación automática de casos de prueba a partir de videos demostrativos, facilitando la creación y mantenimiento de pruebas automatizadas por medio de multimedia.',
       postLink: 'https://github.com/tiagomedi/video-qa-automation',
-      tags: ['QA', 'Python', 'LLM'],
+      tags: ['QA', 'Python', 'LLM', 'Automation'],
       image: 'qa video.png',
       demoLink: ""
     },
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     name: 'Automatización de QA con LLMs: Generación de Casos de Prueba desde Videos de Interfaz',
     description: 'Generación automática de casos de prueba a partir de videos demostrativos, facilitando la creación y mantenimiento de pruebas automatizadas por medio de multimedia.',
     postLink: 'https://github.com/tiagomedi/video-qa-automation',
-    tags: ['QA', 'Python', 'LLM'],
+    tags: ['QA', 'Python', 'LLM', 'Automation'],
     image: 'qa video.png',
     demoLink: ""
   },
