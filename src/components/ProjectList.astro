@@ -70,9 +70,13 @@ const projectImages = import.meta.glob('@src/assets/img/projects/*.{png,jpg,jpeg
 
             {/* Título */}
             <h3 class="project-title">
-              <a class="hover:text-yellow-400 transition-colors duration-300" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>
-                {project.name}
-              </a>
+              {project.demoLink ? (
+                <a class="hover:text-yellow-400 transition-colors duration-300" href={project.demoLink} target="_blank" rel={project.demoLinkRel}>
+                  {project.name}
+                </a>
+              ) : (
+                <span>{project.name}</span>
+              )}
             </h3>
 
             {/* Descripción */}

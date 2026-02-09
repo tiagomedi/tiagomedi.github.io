@@ -13,15 +13,24 @@ export interface Project {
 
 // Función para obtener proyectos con datos de GitHub
 export const getProjects = async (): Promise<Project[]> => {
-  const [dataScience, videoQa, virtualFit] = await Promise.all([
+  const [dataScience, videoQa, virtualFit, planiFitAbGym, muscleRpg, geoRuta] = await Promise.all([
+    getRepositoryDetails('tiagomedi/plani-fit-ab_gym'),
     getRepositoryDetails('tiagomedi/DataScience-project'),
     getRepositoryDetails('tiagomedi/video-qa-automation'),
     getRepositoryDetails('tiagomedi/ASAI-VirtualFit'),
     getRepositoryDetails('tiagomedi/Muscle-RPG'),
-    getRepositoryDetails('fase99/GeoRuta-Inmobiliaria')
+    getRepositoryDetails('fase99/GeoRuta-Inmobiliaria'),
   ]);
 
   return [
+    {
+      name: 'Planificación ejercicio automatizada | ABGYM',
+      description: 'Aplicación web fullstack para la creación y gestión profesional de rutinas de entrenamiento en gimnasio.',
+      postLink: 'https://github.com/tiagomedi/plani-fit-ab_gym',
+      tags: ['Uvicorn', 'Python', 'FastAPI', 'Reportlab'],
+      image: 'plani-abgym.png',
+      demoLink: ""
+    },
     {
       name: 'GeoRuta Inmobiliaria',
       description: 'GeoRuta Inmobiliaria es una plataforma resiliente basada en SIG diseñada para transformar la búsqueda de vivienda en un proceso logísticamente eficiente y centrado en el entorno.',
@@ -75,6 +84,14 @@ export const getProjects = async (): Promise<Project[]> => {
 
 // Exportar proyectos estáticos para fallback
 export const projects: Project[] = [
+  {
+    name: 'Planificación ejercicio automatizada | ABGYM',
+    description: 'Aplicación web fullstack para la creación y gestión profesional de rutinas de entrenamiento en gimnasio.',
+    postLink: 'https://github.com/tiagomedi/plani-fit-ab_gym',
+    tags: ['Uvicorn', 'Python', 'FastAPI', 'Reportlab'],
+    image: 'plani-abgym.png',
+    demoLink: ""
+  },
   {
     name: 'GeoRuta Inmobiliaria',
     description: 'GeoRuta Inmobiliaria es una plataforma resiliente basada en SIG diseñada para transformar la búsqueda de vivienda en un proceso logísticamente eficiente y centrado en el entorno.',
